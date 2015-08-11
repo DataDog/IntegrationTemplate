@@ -25,12 +25,12 @@ If you want to reference images, please add images into "YourAppName/Images/" fo
 ## Metrics
 There are columns in metrics.csv file, here is a description and acceptable value for each
 * **metric_name:** This is the name of metric. You should name this yourappname.metric_name.
-* **metric_type:** This can be either `counter` or `gauge`. See more [here](http://docs.datadoghq.com/guides/metrics/#counters).
+* **metric_type:** This can be any one of `{'gauge', 'counter', 'rate', 'count'}`. See more [here](http://docs.datadoghq.com/guides/metrics/#counters).
 * **interval:** Leave blank
 * **unit_name:** The unit for your metric. For example, if you put `connections` here, your metric will be shown like " 50 connections"
 * **per_unit_name:** The base unit for your metric. For example, if you put `second` here, your metric will be shown like "50 connections/second"
 * **description:** This is a text description of your metric
-* **orientation:** This can be either 0 or 1. For example, `system.cpu.user`: the lower it is, the better it is. Its orientation should be 0. On the contrary `system.cpu.idle`: the higher it is, the better it is. Its orientation should be 1
+* **orientation:** This can be -1, 0 or 1. For example, `system.cpu.user`: the lower it is, the better it is. Its orientation should be -1. On the contrary `system.cpu.idle`: the higher it is, the better it is. Its orientation should be 1. 0 means no values are better or worse.
 * **integration:** This is the name of your integraiton. In this case it should be `yourappname`, same to what you use in your metric namespace
 * **short_name:** A short name for your metric. For example, short name for `postgresql` is `pg`
 
