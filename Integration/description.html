@@ -5,58 +5,46 @@
   </head>
   
   <body>
-    <!--<%def name="title()">Your Integration</%def>-->
-    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <!--<%def name="title()">Moxtra Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Moxtra Integration</h2></div>
     <div class="saas_tile" id="tile">
       <div class="saas_avatar saas_in">
         <img src="Images/200x128.png">
       </div>
       <div class="saas_content">
-        <p class="saas_name saas_in">Your app</p>
+        <p class="saas_name saas_in">Moxtra</p>
         <div class="saas_controls">
           <button class="meh">
             <span class="js-icon text-success">+</span>
             <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
           </button>
         </div>
-        <div class="saas_description saas_in" id="tiledescription">This is a short description of your product</div>
+        <div class="saas_description saas_in" id="tiledescription">Moxtra is an embeddable, multilayered cloud collaboration service that provides conversations, content and meeting on demand.</div>
       </div>
     </div>
     
     <div class="integration_content" id="int-overview">
       <h2>Overview</h2>
-      <p>Get metrics from your app in real time to</p>
+      <p>Moxtra delivers an embeddable, multilayered cloud collaboration service that lets people work on the go or at their desks, in real-time or any time. Moxtra understands that the mobile workforce needs to stay connected to their work and each other, from anywhere, on any device. The Moxtra app, is an all-in-one collaboration workspace that provides conversations, content and meeting on demand. In April 2015, Gartner named Moxtra, a 'Cool Vendor in Social Software and Collaboration'. </p>
+      <p>Integrate Moxtra to</p>
       <ul>
-        <li>Visualize performance metrics</li>
+        <li>Be notified when a metric alert is triggered</li>
+        <li>Share your graphs with your team</li>
       </ul>
-      <p>
-        <img class="screenshot" src="Images/snapshot.png" />
-      </p>
     </div>
     
     <div class="integration_content"  id="int-configuration">
       <h2>Configuration</h2>
       <p>
-        <em>To capture metrics you need to...</em>
+        <em>To create this integration...</em>
       </p>
       <ol>
-        <li>Configure (
-          <a href="http://link_to_your_documentation">see doc<a/>)<br>
-          <pre class="textfile">
-            <code>
-Use escaped text between &lt;code&gt; section 
-            </code>
-           </pre>
-        </li>
-        <li>Configure .... to monitor<br>
-        Edit ${confd_help('<code>conf.d/%s.yaml</code>' % agent_name)}
-        <pre class="textfile">
-          <code>
-Text instrutions for confugraing your integartion
-          </code>
-        </pre>
-       </li>
+        <li>In your Moxtra account, navigate to the Integrations tab.</li>
+        <li>Search for Datadog and Add the integration.</li>
+        <li>Copy the Webhook URL in the field below.</li>
      </ol>
+     <!-- Text field to enter the Moxtra webhook URL  -->
+     <!-- Install Integration button -->
    </div>
 </body>
 </html>
