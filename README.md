@@ -11,7 +11,7 @@ To add a new tile to Datadog integration page, please follow the steps below
   > Goto https://app.datadoghq.com/dash/list and click on "Create dashboard" and select "ScreenBoard". Once you are done editing, please save and add the link to mainfest.json file.
 
   > The link will look like this: https://app.datadoghq.com/screen/0000/boardname
-  
+
 5. Edit YourAppName/description.html to provide your application's information
 6. Edit YourAppName/metrics.csv to provide metrics you are collecting. See [metrics](#Metrics) for more detail and example
 6. Commit, push and submit pull request
@@ -36,7 +36,7 @@ There are columns in metrics.csv file, here is a description and acceptable valu
 
 
 ## Important notices
-1. Do not try to add new css rules, the preview.css is only for preview purpose, all the rules within will be ignored 
+1. Do not try to add new css rules, the preview.css is only for preview purpose, all the rules within will be ignored
 
 
-Send e-mail to will@datadoghq.com if you run into any problems.
+Send e-mail to ilan@datadoghq.com if you run into any problems.
