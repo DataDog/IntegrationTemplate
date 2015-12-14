@@ -1,0 +1,39 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+yarn.metrics.appsSubmitted,gauge,,apps,,The number of submitted apps,0,yarn,yarn app submitted
+yarn.metrics.appsCompleted,gauge,,apps,,The number of completed apps,0,yarn,yarn app compleated
+yarn.metrics.appsPending,gauge,,apps,,The number of pending apps,0,yarn,yarn app pending
+yarn.metrics.appsRunning,gauge,,apps,,The number of running apps,0,yarn,yarn app running
+yarn.metrics.appsFailed,gauge,,apps,,The number of failed apps,0,yarn,yarn app failed
+yarn.metrics.appsKilled,gauge,,apps,,The number of killed apps,0,yarn,yarn app killed
+yarn.metrics.reservedMB,gauge,,MBs,,The size of reserved memory,0,yarn,yarn mem reserved
+yarn.metrics.availableMB,gauge,,MBs,,The amount of available memory,0,yarn,yarn mem available
+yarn.metrics.allocatedMB,gauge,,MBs,,The amount of allocated memory,0,yarn,yarn mem allocated
+yarn.metrics.totalMB,gauge,,MBs,,The amount of total memory,0,yarn,yarn mem total
+yarn.metrics.reservedVirtualCores,gauge,,cores,,The number of reserved virtual cores,0,yarn,yarn cores reserved
+yarn.metrics.availableVirtualCores,gauge,,cores,,The number of available virtual cores,0,yarn,yarn cores available
+yarn.metrics.allocatedVirtualCores,gauge,,cores,,The number of allocated virtual cores,0,yarn,yarn cores allocated
+yarn.metrics.totalVirtualCores,gauge,,cores,,The total number of virtual cores,0,yarn,yarn cores total
+yarn.metrics.containersAllocated,gauge,,containers,,The number of containers allocated,0,yarn,yarn containers allocated
+yarn.metrics.containersReserved,gauge,,containers,,The number of containers reserved,0,yarn,yarn containers reserved
+yarn.metrics.containersPending,gauge,,containers,,The number of containers pending,0,yarn,yarn containers pending
+yarn.metrics.totalNodes,gauge,,nodes,,The total number of nodes,0,yarn,yarn nodes total
+yarn.metrics.activeNodes,gauge,,nodes,,The number of active nodes,0,yarn,yarn nodes active
+yarn.metrics.lostNodes,gauge,,nodes,,The number of lost nodes,0,yarn,yarn nodes lost
+yarn.metrics.unhealthyNodes,gauge,,nodes,,The number of unhealthy nodes,0,yarn,yarn nodes unhealthy
+yarn.metrics.decommissionedNodes,gauge,,nodes,,The number of decommissioned nodes,0,yarn,yarn nodes decommissioned
+yarn.metrics.rebootedNodes,gauge,,nodes,,The number of rebooted nodes,0,yarn,yarn nodes rebooted
+yarn.app.progress,gauge,,percent,,The progress of the application as a percent,0,yarn,yarn app progress
+yarn.app.startedTime,gauge,,seconds,,The time in which application started (in ms since epoch),0,yarn,yarn app start time
+yarn.app.finishedTime,gauge,,seconds,,The time in which the application finished (in ms since epoch),0,yarn,yarn app finish time
+yarn.app.elapsedTime,gauge,,seconds,,The elapsed time since the application started (in ms),0,yarn,yarn app elapsed time
+yarn.app.allocatedMB,gauge,,MBs,,The sum of memory in MB allocated to the applications running containers,0,yarn,yarn app mem allocated
+yarn.app.allocatedVCores,gauge,,cores,,The sum of virtual cores allocated to the applications running containers,0,yarn,yarn app cores allocated
+yarn.app.runningContainers,gauge,,containers,,The number of containers currently running for the application,0,yarn,yarn app containers running
+yarn.app.memorySeconds,gauge,,seconds,,The amount of memory the application has allocated (megabyte-seconds),0,yarn,yarn app memory time
+yarn.app.vcoreSeconds,gauge,,seconds,,The amount of CPU resources the application has allocated (virtual core-seconds),0,yarn,yarn app cores time
+yarn.node.lastHealthUpdate,gauge,,milliseconds,,The last time the node reported its health (in ms since epoch),0,yarn,yarn node last health update
+yarn.node.usedMemoryMB,gauge,,MBs,,The total amount of memory currently used on the node (in MB),0,yarn,yarn node mem used
+yarn.node.availMemoryMB,gauge,,MBs,,The total amount of memory currently available on the node (in MB),0,yarn,yarn node mem available
+yarn.node.usedVirtualCores,gauge,,cores,,The total number of vCores currently used on the node,0,yarn,yarn node cores used
+yarn.node.availableVirtualCores,gauge,,cores,,The total number of vCores available on the node,0,yarn,yarn node cores available
+yarn.node.numContainers,gauge,,containers,,The total number of containers currently running on the node,0,yarn,yarn node containers total
