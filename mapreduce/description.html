@@ -5,8 +5,8 @@
   </head>
   
   <body>
-    <!--<%def name="title()">Your Integration</%def>-->
-    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <!--<%def name="title()">mapreduce</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>MapReduce</h2></div>
     <div class="saas_tile" id="tile">
       <div class="saas_avatar saas_in">
         <img src="Images/200x128.png">
@@ -19,15 +19,16 @@
             <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
           </button>
         </div>
-        <div class="saas_description saas_in" id="tiledescription">This is a short description of your product</div>
+        <div class="saas_description saas_in" id="tiledescription">MapReduce is a programming model and an associated implementation for processing and generating large data sets with a parallel, distributed algorithm on a cluster.</div>
       </div>
     </div>
     
     <div class="integration_content" id="int-overview">
       <h2>Overview</h2>
-      <p>Get metrics from your app in real time to</p>
+      <p>Capture MapReduce metrics to:</p>
       <ul>
-        <li>Visualize performance metrics</li>
+        <li>Analyze and inspect individual MapReduce jobs and tasks.</li>
+        <li>Visualize performance of individual tasks.</li>
       </ul>
       <p>
         <img class="screenshot" src="Images/snapshot.png" />
@@ -37,26 +38,43 @@
     <div class="integration_content"  id="int-configuration">
       <h2>Configuration</h2>
       <p>
-        <em>To capture metrics you need to...</em>
+        <em>Install Datadog Agent on the ResourceManager</em>
       </p>
+      
       <ol>
-        <li>Configure (
-          <a href="http://link_to_your_documentation">see doc<a/>)<br>
-          <pre class="textfile">
-            <code>
-Use escaped text between &lt;code&gt; section 
-            </code>
-           </pre>
-        </li>
-        <li>Configure .... to monitor<br>
+        <li>Configure the agent to connect to the ResourceManager<br>
         Edit ${confd_help('<code>conf.d/%s.yaml</code>' % agent_name)}
         <pre class="textfile">
           <code>
-Text instrutions for confugraing your integartion
+init_config:
+
+instances:
+    -   resourcemanager_uri: http://localhost:8088
+
           </code>
         </pre>
-       </li>
-     </ol>
-   </div>
+        </li>
+
+        <li>Restart the Agent</li>
+
+        <li>Execute the info command and verify that the integration check passed. The output of the command should contain a section similar to the following:
+        <pre class="verification">
+          <code>
+  Checks
+  ======
+
+    [...]
+
+    mapreduce
+    ---------
+      - instance #0 [OK]
+      - Collected 120 metrics, 0 events & 8 service checks
+  
+          </code>
+        </pre>
+
+        </li>
+      </ol>
+    </div>
 </body>
 </html>
