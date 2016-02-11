@@ -1,6 +1,5 @@
 metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
 hdfs_datanode.dfs_remaining,gauge,,bytes,,The remaining disk space left in bytes,0,hdfs_datanode,dfs_rem
-hdfs_datanode.storage_info,gauge,,,,Path to HDFS storage location,0,hdfs_datanode,info
 hdfs_datanode.dfs_capacity,gauge,,bytes,,Disk capacity in bytes,0,hdfs_datanode,dfs_cap
 hdfs_datanode.dfs_used,gauge,,bytes,,Disk usage in bytes,0,hdfs_datanode,dfs_used
 hdfs_datanode.cache_capacity,gauge,,bytes,,Cache capacity in bytes,0,hdfs_datanode,cache_cap
