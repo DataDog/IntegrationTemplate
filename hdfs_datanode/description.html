@@ -5,14 +5,14 @@
   </head>
   
   <body>
-    <!--<%def name="title()">HDFS JMX</%def>-->
-    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <!--<%def name="title()">HDFS Datanode</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>HDFS Datanode</h2></div>
     <div class="saas_tile" id="tile">
       <div class="saas_avatar saas_in">
         <img src="Images/200x128.png">
       </div>
       <div class="saas_content">
-        <p class="saas_name saas_in">Your app</p>
+        <p class="saas_name saas_in">HDFS Datanode</p>
         <div class="saas_controls">
           <button class="meh">
             <span class="js-icon text-success">+</span>
@@ -25,11 +25,10 @@
     
     <div class="integration_content" id="int-overview">
       <h2>Overview</h2>
-      <p>Capture HDFS metrics in realtime to:</p>
+      <p>Capture HDFS metrics for each DataNode in realtime to:</p>
       <ul>
         <li>Visualize cluster health, performance and utilization.</li>
         <li>Analyze and inspect individual node utilization.</li>
-        <li></li>
       </ul>
       <p>
         <img class="screenshot" src="Images/snapshot.png" />
@@ -49,7 +48,15 @@
 init_config:
 
 instances:
-    -    hdfs_jmx_uri: http://localhost:50075/jmx
+  #
+  # The HDFS DataNode check retrieves metrics from the HDFS DataNode's JMX
+  # interface. This check must be installed on a HDFS DataNode. The HDFS
+  # DataNode JMX URI is composed of the DataNode's hostname and port.
+  #
+  # The hostname and port can be found in the hdfs-site.xml conf file under
+  # the property dfs.datanode.http.address
+  #
+  - hdfs_datanode_jmx_uri: http://localhost:50075
           </code>
         </pre>
         </li>
@@ -64,10 +71,11 @@ instances:
 
     [...]
 
-    hdfs_jmx
-    --------
+    hdfs_datanode
+    -------------
       - instance #0 [OK]
-      - Collected 12 metrics, 0 events & 2 service checks
+      - Collected 10 metrics, 0 events & 2 service checks
+
           </code>
         </pre>
 
