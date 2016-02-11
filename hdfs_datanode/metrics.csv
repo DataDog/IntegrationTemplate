@@ -3,6 +3,7 @@ hdfs_datanode.dfs_remaining,gauge,,bytes,,The remaining disk space left in bytes
 hdfs_datanode.dfs_capacity,gauge,,bytes,,Disk capacity in bytes,0,hdfs_datanode,dfs_cap
 hdfs_datanode.dfs_used,gauge,,bytes,,Disk usage in bytes,0,hdfs_datanode,dfs_used
 hdfs_datanode.cache_capacity,gauge,,bytes,,Cache capacity in bytes,0,hdfs_datanode,cache_cap
+hdfs_datanode.cache_used,gauge,,bytes,,Cache used in bytes,0,hdfs_datanode,cache_used
 hdfs_datanode.num_failed_volumes,gauge,,volumes,,Number of failed volumes,0,hdfs_datanode,failed_volumes
 hdfs_datanode.last_volume_failure_date,gauge,,date,,Date the last volume failed,0,hdfs_datanode,last_failed_volume
 hdfs_datanode.estimated_capacity_lost_total,gauge,,bytes,,The estimated capacity lost in bytes,0,hdfs_datanode,cap_lost
