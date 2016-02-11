@@ -1,40 +1,27 @@
 metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
-mapreduce.job.elapsed_time,gauge,,ms,,The elapsed time since the application started (in ms),0,mapreduce,mr_job_time
-mapreduce.job.maps_total,gauge,,maps,,The total number of maps,0,mapreduce,mr_job_maps
-mapreduce.job.maps_completed,gauge,,maps,,The number of completed maps,0,mapreduce,mr_job_maps_completed
-mapreduce.job.reduces_total,gauge,,reduces,,The total number of reduces,0,mapreduce,mr_job_reduces
-mapreduce.job.reduces_completed,gauge,,reduces,,The number of completed reduces,0,mapreduce,mr_job_reduces_completed
-mapreduce.job.maps_pending,gauge,,maps,,The number of maps still to be run,0,mapreduce,mr_job_maps_pending
-mapreduce.job.maps_running,gauge,,maps,,The number of running maps,0,mapreduce,mr_job_maps_running
-mapreduce.job.reduces_pending,gauge,,reduces,,The number of reduces still to be run,0,mapreduce,mr_job_reduces_pending
-mapreduce.job.reduces_running,gauge,,reduces,,The number of running reduces,0,mapreduce,mr_job_reduces_running
-mapreduce.job.new_reduce_attempts,gauge,,reduces,,The number of new reduce attempts,0,mapreduce,mr_job_new_reduce_attempts
-mapreduce.job.running_reduce_attempts,gauge,,reduces,,The number of running reduce attempts,0,mapreduce,mr_job_running_reduce_attempts
-mapreduce.job.failed_reduce_attempts,gauge,,reduces,,The number of failed reduce attempts,0,mapreduce,mr_job_failed_reduce_attempts
-mapreduce.job.killed_reduce_attempts,gauge,,reduces,,The number of killed reduce attempts,0,mapreduce,mr_job_killed_reduce_attempts
-mapreduce.job.successful_reduce_attempts,gauge,,reduces,,The number of successful reduce attempts,0,mapreduce,mr_job_successful_reduce_attempts
-mapreduce.job.new_map_attempts,gauge,,maps,,The number of new map attempts,0,mapreduce,mr_job_new_map_attempts
-mapreduce.job.running_map_attempts,gauge,,maps,,The number of running map attempts,0,mapreduce,mr_job_running_map_attempts
-mapreduce.job.failed_map_attempts,gauge,,maps,,The number of failed map attempts,0,mapreduce,mr_job_failed_map_attempts
-mapreduce.job.killed_map_attempts,gauge,,maps,,The number of killed map attempts,0,mapreduce,mr_job_killed_map_attempts
-mapreduce.job.successful_map_attempts,gauge,,maps,,The number of successful map attempts,0,mapreduce,mr_job_successful_map_attempts
-mapreduce.job.counter.reduce_counter_value,gauge,,,,The counter value of reduce tasks,0,mapreduce,mr_job_reduce_counter
-mapreduce.job.counter.map_counter_value,gauge,,,,The counter value of map tasks,0,mapreduce,mr_job_map_counter
-mapreduce.job.counter.total_counter_value,gauge,,,,The counter value of all tasks,0,mapreduce,mr_job_total_counter
-mapreduce.job.task.progress,gauge,,progress,,The progress of the task as a percent,0,mapreduce,mr_task_progress
-mapreduce.job.task.elapsed_time,gauge,,ms,,The elapsed time sine the application started (in ms),0,mapreduce,mr_task_time
-maprduce.job.task.state.new,gauge,,tasks,,The total number of new tasks,0,mapreduce,mr_task_new
-maprduce.job.task.state.scheduled,gauge,,tasks,,The total number of tasks with a scheduled state,0,mapreduce,mr_task_schedule
-maprduce.job.task.state.running,gauge,,tasks,,The total number of tasks with a running state,0,mapreduce,mr_task_running
-maprduce.job.task.state.succeeded,gauge,,tasks,,The total number of tasks with a succeeded state,0,mapreduce,mr_task_succeeded
-maprduce.job.task.state.failed,gauge,,tasks,,The total number of tasks with a failed state,0,mapreduce,mr_task_failed
-maprduce.job.task.state.kill_wait,gauge,,tasks,,The total number of task with a kill_wait state,0,mapreduce,mr_task_kill_wait
-maprduce.job.task.state.killed,gauge,,tasks,,The total number of tasks with a killed state,0,mapreduce,mr_task_killed
-maprduce.job.task.type.map,gauge,,tasks,,The total number of map tasks,0,mapreduce,mr_task_map
-maprduce.job.task.type.reduce,gauge,,tasks,,The total number of reduce tasks,0,mapreduce,mr_task_reduce
-mapreduce.job.task.counter.map_input_records,gauge,,records,,The number of input records of a map task,0,mapreduce,mr_task_counter_map_input_records
-mapreduce.job.task.counter.map_output_records,gauge,,records,,The number of output records of a map task,0,mapreduce,mr_task_counter_map_output_records
-mapreduce.job.task.counter.combine_input_records,gauge,,records,,The number of input records of a combine task,0,mapreduce,mr_task_counter_combine_input_records
-mapreduce.job.task.counter.combine_output_records,gauge,,records,,The number of output records of a combine task,0,mapreduce,mr_task_counter_counter_output_records
-mapreduce.job.task.counter.reduce_input_records,gauge,,records,,The number of input records of a reduce task,0,mapreduce,mr_task_counter_reduce_input_records
-mapreduce.job.task.counter.reduce_output_records,gauge,,records,,The number of output records of a reduce task,0,mapreduce,mr_task_counter_reduce_output_records
+mapreduce.job.elapsed_time,histogram,,ms,,The elapsed time since the application started (in ms),0,mapreduce,mr_job_time
+mapreduce.job.maps_total,histogram,,maps,,The total number of maps,0,mapreduce,mr_job_maps
+mapreduce.job.maps_completed,histogram,,maps,,The number of completed maps,0,mapreduce,mr_job_maps_completed
+mapreduce.job.reduces_total,histogram,,reduces,,The total number of reduces,0,mapreduce,mr_job_reduces
+mapreduce.job.reduces_completed,histogram,,reduces,,The number of completed reduces,0,mapreduce,mr_job_reduces_completed
+mapreduce.job.maps_pending,histogram,,maps,,The number of maps still to be run,0,mapreduce,mr_job_maps_pending
+mapreduce.job.maps_running,histogram,,maps,,The number of running maps,0,mapreduce,mr_job_maps_running
+mapreduce.job.reduces_pending,histogram,,reduces,,The number of reduces still to be run,0,mapreduce,mr_job_reduces_pending
+mapreduce.job.reduces_running,histogram,,reduces,,The number of running reduces,0,mapreduce,mr_job_reduces_running
+mapreduce.job.new_reduce_attempts,histogram,,reduces,,The number of new reduce attempts,0,mapreduce,mr_job_new_reduce_attempts
+mapreduce.job.running_reduce_attempts,histogram,,reduces,,The number of running reduce attempts,0,mapreduce,mr_job_running_reduce_attempts
+mapreduce.job.failed_reduce_attempts,histogram,,reduces,,The number of failed reduce attempts,0,mapreduce,mr_job_failed_reduce_attempts
+mapreduce.job.killed_reduce_attempts,histogram,,reduces,,The number of killed reduce attempts,0,mapreduce,mr_job_killed_reduce_attempts
+mapreduce.job.successful_reduce_attempts,histogram,,reduces,,The number of successful reduce attempts,0,mapreduce,mr_job_successful_reduce_attempts
+mapreduce.job.new_map_attempts,histogram,,maps,,The number of new map attempts,0,mapreduce,mr_job_new_map_attempts
+mapreduce.job.running_map_attempts,histogram,,maps,,The number of running map attempts,0,mapreduce,mr_job_running_map_attempts
+mapreduce.job.failed_map_attempts,histogram,,maps,,The number of failed map attempts,0,mapreduce,mr_job_failed_map_attempts
+mapreduce.job.killed_map_attempts,histogram,,maps,,The number of killed map attempts,0,mapreduce,mr_job_killed_map_attempts
+mapreduce.job.successful_map_attempts,histogram,,maps,,The number of successful map attempts,0,mapreduce,mr_job_successful_map_attempts
+mapreduce.job.counter.reduce_counter_value,histogram,,,,The counter value of reduce tasks,0,mapreduce,mr_job_reduce_counter
+mapreduce.job.counter.map_counter_value,histogram,,,,The counter value of map tasks,0,mapreduce,mr_job_map_counter
+mapreduce.job.counter.total_counter_value,histogram,,,,The counter value of all tasks,0,mapreduce,mr_job_total_counter
+mapreduce.job.map.task.progress,histogram,,progress,,The distribution of all map task progresses,0,mapreduce,mr_map_task_progress
+mapreduce.job.map.task.elapsed_time,histogram,,ms,,The distribution of all map tasks elapsed time (in ms),0,mapreduce,mr_map_task_time
+mapreduce.job.reduce.task.progress,histogram,,progress,,The distribution of all reduce task progresses,0,mapreduce,mr_map_task_progress
+mapreduce.job.reduce.task.elapsed_time,histogram,,ms,,The distribution of all reduce tasks elapsed time (in ms),0,mapreduce,mr_map_task_time
