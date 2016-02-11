@@ -1,12 +1,22 @@
 metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
-hdfs.dfs_remaining,gauge,bytes,,The remaining disk space left in bytes,0,hdfs_jmx,dfs_rem
-hdfs.storage_info,gauge,,,Path to HDFS storage location,0,hdfs_jmx,info
-hdfs.dfs_capacity,gauge,bytes,,Disk capacity in bytes,0,hdfs_jmx,dfs_cap
-hdfs.dfs_used,gauge,bytes,,Disk usage in bytes,0,hdfs_jmx,dfs_used
-hdfs.cache_capacity,gauge,bytes,,Cache capacity in bytes,0,hdfs_jmx,cache_cap
-hdfs.num_failed_volumes,gauge,volumes,,Number of failed volumes,0,hdfs_jmx,failed_volumes
-hdfs.last_volume_failure_date,gauge,date,,Date the last volume failed,0,hdfs_jmx,last_failed_volume
-hdfs.estimated_capacity_lost_total,gauge,bytes,,The estimated capacity lost in bytes,0,hdfs_jmx,cap_lost
-hdfs.num_blocks_cached,gauge,blocks,,The number of blocks cached,0,hdfs_jmx,blk_cached
-hdfs.num_blocks_failed_to_cache,gauge,blocks,,The number of blocks that failed to cache,0,hdfs_jmx,blk_failed
-hdfs.num_blocks_failed_to_uncache,gauge,blocks,,The number of failed blocks to remove from cache,0,hdfs_jmx,blk_failed_uncache
+hdfs_namenode.capacity_total,gauge,,bytes,,Total disk capacity in bytes,hdfs_namenode,cap_total
+hdfs_namenode.capacity_used,gauge,,bytes,,Disk usage in bytes,hdfs_namenode,cap_used
+hdfs_namenode.capacity_remaining,gauge,,bytes,,Remaining disk space left in bytes,hdfs_namenode,cap_remaining
+hdfs_namenode.total_load,gauge,,,,Total load on the file system,hdfs_namenode,tot_load
+hdfs_namenode.fs_lock_queue_length,gauge,,,,Lock queue length,hdfs_namenode,lck_queue
+hdfs_namenode.blocks_total,gauge,,blocks,,Total number of blocks,hdfs_namenode,blk_total
+hdfs_namenode.max_objects,gauge,,objects,,Maximum number of files HDFS supports,hdfs_namenode,max_objs
+hdfs_namenode.files_total,gauge,,files,,Total number of files,hdfs_namenode,files_total
+hdfs_namenode.pending_replication_blocks,gauge,,blocks,,Number of blocks pending replication,hdfs_namenode,pending_replication_blocks
+hdfs_namenode.under_replicated_blocks,gauge,,blocks,,Number of under replicated blocks,hdfs_namenode,under_replicated_blocks
+hdfs_namenode.scheduled_replication_blocks,gauge,,blocks,,Number of blocks scheduled for replication,hdfs_namenode,scheduled_replication_blocks
+hdfs_namenode.pending_deletion_blocks,gauge,,blocks,,Number of pending deletion blocks,hdfs_namenode,pending_deletion_blocks
+hdfs_namenode.num_live_data_nodes,gauge,,nodes,,Total number of live data nodes,hdfs_namenode,num_live_data_nodes
+hdfs_namenode.num_dead_data_nodes,gauge,,nodes,,Total number of dead data nodes,hdfs_namenode,num_dead_data_nodes
+hdfs_namenode.num_decom_live_data_nodes,gauge,,nodes,,Number of decommissioning live data nodes,hdfs_namenode,num_decom_live_data_nodes
+hdfs_namenode.num_decom_dead_data_nodes,gauge,,nodes,,Number of decommissioning dead data nodes,hdfs_namenode,num_decom_dead_data_nodes
+hdfs_namenode.volume_failures_total,gauge,,volumes,,Total volume failures,hdfs_namenode,volume_failures_total
+hdfs_namenode.estimated_capacity_lost_total,gauge,,bytes,,Estimated capacity lost in bytes,hdfs_namenode,estimated_capacity_lost_total
+hdfs_namenode.num_decommissioning_data_nodes,gauge,,nodes,,Number of decommissioning data nodes,hdfs_namenode,num_decommissioning_data_nodes
+hdfs_namenode.num_stale_data_nodes,gauge,,nodes,,Number of stale data nodes,hdfs_namenode,num_stale_data_nodes
+hdfs_namenode.num_stale_storages,gauge,,storages,,Number of stale storages,hdfs_namenode,num_stale_storages

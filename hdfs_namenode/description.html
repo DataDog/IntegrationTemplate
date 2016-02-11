@@ -5,14 +5,14 @@
   </head>
   
   <body>
-    <!--<%def name="title()">HDFS JMX</%def>-->
-    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <!--<%def name="title()">HDFS NameNode</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>HDFS NameNode</h2></div>
     <div class="saas_tile" id="tile">
       <div class="saas_avatar saas_in">
         <img src="Images/200x128.png">
       </div>
       <div class="saas_content">
-        <p class="saas_name saas_in">Your app</p>
+        <p class="saas_name saas_in">HDFS NameNode</p>
         <div class="saas_controls">
           <button class="meh">
             <span class="js-icon text-success">+</span>
@@ -25,11 +25,10 @@
     
     <div class="integration_content" id="int-overview">
       <h2>Overview</h2>
-      <p>Capture HDFS metrics in realtime to:</p>
+      <p>Capture HDFS metrics from the NameNode in realtime to:</p>
       <ul>
         <li>Visualize cluster health, performance and utilization.</li>
         <li>Analyze and inspect individual node utilization.</li>
-        <li></li>
       </ul>
       <p>
         <img class="screenshot" src="Images/snapshot.png" />
@@ -39,7 +38,7 @@
     <div class="integration_content"  id="int-configuration">
       <h2>Configuration</h2>
       <p>
-        <em>Install the Datadog Agent on each HDFS data node</em>
+        <em>Install the Datadog Agent on the HDFS NameNode</em>
       </p>
       <ol>
         <li>Configure the agent to connect to the JMX URI<br>
@@ -49,7 +48,15 @@
 init_config:
 
 instances:
-    -    hdfs_jmx_uri: http://localhost:50075/jmx
+  #
+  # The HDFS NameNode check retrieves metrics from the HDFS NameNode's JMX
+  # interface. This check must be installed on the NameNode. The HDFS
+  # NameNode JMX URI is composed of the NameNode's hostname and port.
+  #
+  # The hostname and port can be found in the hdfs-site.xml conf file under
+  # the property dfs.http.address or dfs.namenode.http-address
+  #
+  -  hdfs_namenode_jmx_uri: http://localhost:50070
           </code>
         </pre>
         </li>
@@ -64,10 +71,10 @@ instances:
 
     [...]
 
-    hdfs_jmx
-    --------
+    hdfs_namenode
+    -------------
       - instance #0 [OK]
-      - Collected 12 metrics, 0 events & 2 service checks
+      - Collected 21 metrics, 0 events & 2 service checks
           </code>
         </pre>
 
