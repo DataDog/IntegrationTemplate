@@ -5,7 +5,7 @@ To add a new tile to Datadog integration page, please follow the steps below
 
 1. Fork this repo
 2. Copy Integration directory to YourAppName (cp -r Integration YourAppName)
-3. Create your logo files on a white background canvas in 3 different sizes, 200x128px, 128x128px and 125x80px. Add images to your Images directory.
+3. Create your logo files on a white background canvas in 3 different sizes, 200x128px, 128x128px and 120x60px. Add images to your Images directory.
 4. (Optional) If you want user to see a default dashboard, please signup for datadog and create a screenboard
 
   > Goto https://app.datadoghq.com/dash/list and click on "Create dashboard" and select "ScreenBoard". Once you are done editing, please save and add the link to mainfest.json file.
