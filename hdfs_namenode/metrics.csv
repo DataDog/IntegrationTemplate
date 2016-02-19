@@ -20,3 +20,5 @@ hdfs_namenode.estimated_capacity_lost_total,gauge,,byte,,Estimated capacity lost
 hdfs_namenode.num_decommissioning_data_nodes,gauge,,node,,Number of decommissioning data nodes,0,hdfs_namenode,decom d nds
 hdfs_namenode.num_stale_data_nodes,gauge,,node,,Number of stale data nodes,0,hdfs_namenode,stl d nds
 hdfs_namenode.num_stale_storages,gauge,,,,Number of stale storages,0,hdfs_namenode,stl strgs
+hdfs_namenode.missing_blocks,gauge,,block,,Number of missing blocks,0,hdfs_namenode,blk msng
+hdfs_namenode.corrupt_blocks ,gauge,,block,,Number of corrupt blocks,0,hdfs_namenode,blk crpt
