@@ -1,0 +1,62 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+
+  <body>
+    <!--<%def name="title()">Rollbar</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Rollbar</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Rollbar helps development teams quickly detect, diagnose and defeat application errors.</div>
+      </div>
+    </div>
+
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>
+        <a href=https://rollbar.com/>Rollbar</a> helps development teams detect,
+        diagnose and defeat application errors. View exceptions from all of your
+        languages, frameworks, platforms and environments in one place.
+        Integrating Datadog with Rollbar will send exceptions, errors and code
+        deployments to your Datadog event stream, in real time.
+      </p>
+      <p>Connect Rollbar to Datadog to</p>
+      <ul>
+        <li>Get notified of exceptions, errors, code deployments in your event stream</li>
+        <li>Filter notifications by severity, environment, host, users and more</li>
+        <li>Search for exceptions in your graphs</li>
+        <li>Discuss exceptions with your team</li>
+        <li>Spend less time debugging issues</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="${img_path(" rollbar-error.png ")}" />
+      </p>
+    </div>
+
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>Configuration is per-project in Rollbar.</em>
+      </p>
+      <ol>
+        <li>In Rollbar, go to the Notification settings page for a Project: <strong>Dashboard &#8594; Settings &#8594; Notifications &#8594; Datadog</strong></li>
+        <li>On Datadog, head to the APIs page to get your API Key (copy to your clipboard): <strong>Integrations &#8594; APIs</strong></li>
+        <li>Add your <strong>Datadog API key</strong> (${api_key}) in Rollbar</li>
+        <li>Click <strong>Enable Datadog Integration</strong></li>
+     </ol>
+     <p>Done. Every time an exception occurs, it will appear in your event stream.</p>
+   </div>
+</body>
+</html>
