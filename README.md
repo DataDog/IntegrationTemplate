@@ -19,7 +19,7 @@ To add a new tile to Datadog integration page, please follow the steps below
 If you want to reference images, please add images into "YourAppName/Images/" folder and use the following example to insert image.
 
 ```
-<img src="${img_path(" yourapp-snapshot.png ")}" />
+<img src="${img_path("yourapp-snapshot.png")}" />
 ```
 
 ## Metrics
