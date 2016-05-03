@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+
+  <body>
+    <!--<%def name="title()">Papertrail</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Papertrail</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Send log-derived metrics from Papertrail's hosted log management service to Datadog. Graph the frequency of HTTP 500 requests, OOM errors, "sudo" invocations, or any other important events – from any text log file, OS syslog, Heroku app, or other text data source.</div>
+      </div>
+    </div>
+
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Use Papertrail and Datadog to:</p>
+      <ul>
+        <li>Turn freeform log data into actionable metrics</li>
+        <li>Centralize all text output: syslog, text log files, app hosting platforms (Heroku, Cloud Foundry), </li>
+        <li>Avoid silo-ed operational knowledge. See and correlate log-derived metrics alongside app- and system-level metrics.</li>
+      </ul>
+    </div>
+
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To capture metrics from Papertrail logs:</em>
+      </p>
+      <ol>
+        <li>
+          In Papertrail's <a href="https://papertrailapp.com/tour/viewer">event viewer</a>, save a search for the log event(s) which should be graphed.
+        </li>
+        <li>
+          <a href="http://help.papertrailapp.com/kb/how-it-works/alerts/">Activate a Papertrail alert<a/> for the search. Provide your Datadog credentials. Papertrail will update Datadog every minute.<br>
+        </li>
+     </ol>
+   </div>
+</body>
+</html>
