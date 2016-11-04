@@ -1,0 +1,62 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>xMatters</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">xMatters</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">This is a short description of your product</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Get metrics from your app in real time to</p>
+      <ul>
+        <li>Visualize performance metrics</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To capture metrics you need to...</em>
+      </p>
+      <ol>
+        <li>Configure (
+          <a href="https://support.xmatters.com/hc/en-us/articles/214369486">see doc<a/>)<br>
+          <pre class="textfile">
+            <code>
+Use escaped text between &lt;code&gt; section 
+            </code>
+           </pre>
+        </li>
+        <li>Configure .... to monitor<br>
+        Edit ${confd_help('<code>conf.d/%s.yaml</code>' % agent_name)}
+        <pre class="textfile">
+          <code>
+Text instrutions for confugraing your integartion
+          </code>
+        </pre>
+       </li>
+     </ol>
+   </div>
+</body>
+</html>
