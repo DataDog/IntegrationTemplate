@@ -1,0 +1,60 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/logz-logo-200-128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Logz.io</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Logz.io is an AI-powered log analysis platform that offers the open source ELK Stack as a enterprise-grade cloud service with machine learning technology.
+</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Integrate with Logz.io alerts to see events taking place in real-time</p>
+      <ul>
+        <li>Import alerts into Datadog</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/import_alert_from_logz.jpg" />
+      </p>
+
+      <ul>
+        <li>Incorporate the events into a dashboard to identify correlations with metrics</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/dashboard.png" />
+      </p>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To import alerts into Datadog, you need to take the following steps:</em>
+      </p>
+      <ol>
+        <li>Use a Datadog API key to create a new alert endpoint in Logz.io.
+        </li>
+        <li>Create a new alert in Logz.io for a specific query.
+        </li>
+
+     </ol>
+     <h3>For a detailed description of the steps, see <a href="http://logz.io/blog/log-correlation-datadog/">this</a> article. </h3>
+   </div>
+</body>
+</html>
