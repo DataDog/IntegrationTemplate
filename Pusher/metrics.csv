@@ -1,0 +1,20 @@
+metric name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+pusher.messages,count,,messages,seconds,Messages sent over time,,pusher,msg
+pusher.messages.api_request,count,,messages,seconds,API Requests sent over time,,pusher,msg_api
+pusher.messages.webhook,count,,messages,seconds,Webhooks sent over time,,pusher,msg_webhook
+pusher.messages.presence_event,count,,messages,seconds,Presence events sent over time,,pusher,msg_presence
+pusher.messages.broadcast,count,,messages,seconds,Broadcast messages sent over time,,pusher,msg_broadcast
+pusher.messages.client_event.received,count,,client events,seconds,Client events received sent over time,,pusher,msg_client_rcv
+pusher.messages.client_event.sent,count,,client events,seconds,Client events sent over time,,pusher,msg_client_snt
+pusher.message_size.avg,gauge,,bytes,message,Average message size,,pusher,msg_size_avg
+pusher.message_size.max,gauge,,bytes,message,Maximum message size,,pusher,msg_size_max
+pusher.message_size.p95,gauge,,bytes,message,95th percentile message size,,pusher,msg_size_p95
+pusher.message_size.count,rate,,messages,seconds,Messages count sent over time,,pusher,msg_size_count
+pusher.message_size.median,gauge,,bytes,message,Median message size,,pusher,msg_size_median
+pusher.connections,count,,connections,seconds,Concurrent connections per second,,pusher,conns
+pusher.connections.non_secure,count,,connections,seconds,Non-secure connections per 5 seconds,,pusher,conns_ns
+pusher.connections.non_secure.sockjs,count,,connections,seconds,Non-secure sockjs connections per 5 seconds,,pusher,conns_ns_sockjs
+pusher.connections.non_secure.ws,count,,connections,seconds,Non-secure websocket connections per 5 seconds,,pusher,conns_ns_ws
+pusher.connections.secure,count,,connections,seconds,Secure connections per 5 seconds,,pusher,conns_s
+pusher.connections.secure.sockjs,count,,connections,seconds,Secure sockjs connections per 5 seconds,,pusher,conns_s_sockjs
+pusher.connections.secure.ws,count,,connections,seconds,Secure websocket connections per 5 seconds,,pusher,conns_s_ws
