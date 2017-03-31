@@ -1,15 +1,15 @@
 <html>
-  
+
   <head>
     <link rel="stylesheet" type="text/css" href="preview.css">
   </head>
-  
+
   <body>
     <!--<%def name="title()">Your Integration</%def>-->
     <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
     <div class="saas_tile" id="tile">
       <div class="saas_avatar saas_in">
-        <img src="Images/200x128.png">
+        <img src="Images/split-logo-200x128.png">
       </div>
       <div class="saas_content">
         <p class="saas_name saas_in">Your app</p>
@@ -19,44 +19,49 @@
             <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
           </button>
         </div>
-        <div class="saas_description saas_in" id="tiledescription">This is a short description of your product</div>
+        <div class="saas_description saas_in" id="tiledescription">Split is the leading platform for controlled rollouts, helping businesses of all sizes deliver exceptional user experiences—and mitigate risk—by providing an easy, secure way to target features to customers. Companies like WePay, Segment and thredUP rely on Split to safely introduce and test new features, and draw insights on their use.</div>
       </div>
     </div>
-    
+
     <div class="integration_content" id="int-overview">
       <h2>Overview</h2>
-      <p>Get metrics from your app in real time to</p>
+      <p><a href="http://www.split.io">Split</a> is the leading platform for <a href="http://www.split.io/articles/controlled-rollout">controlled rollouts</a>, helping businesses of all sizes deliver exceptional user experiences—and mitigate risk—by providing an easy, secure way to target features to customers. Companies like WePay, Segment and thredUP rely on Split to safely introduce and test new features, and draw insights on their use. Out of the box, Split provides:</p>
       <ul>
-        <li>Visualize performance metrics</li>
+        <li><a href="http://www.split.io/feature-flags">Feature flags</a> in Java, JavaScript, NodeJS, .NET, PHP, Python, Ruby and Ruby-on-Rails</li>
+        <li>Open source, <a href="http://www.split.io/languages">language-specific SDKs</a></li>
+        <li>Flexible feature roll out capabilities, by-percentage, by-whitelist, or by-attribute
+        <li>Robust feature-targeting capabilities, for any attribute you can define.</li>
+        <li>Enterprise-grade security (no need to ever share user information with Split)</li>
+        <li>A kill switch, to instantly halt and revert any feature, without touching code</li>
+        <li>A beautiful web console to manage features rollouts</li>
+        <li><a href="http://www.split.io/integrations">Integrations</a> with the DevOps tools your team is already using, like Slack, JIRA, and of course, Datadog</li>
       </ul>
       <p>
-        <img class="screenshot" src="Images/snapshot.png" />
+        <img class="screenshot" src="Images/split-screenshot.png" />
       </p>
     </div>
-    
+
     <div class="integration_content"  id="int-configuration">
       <h2>Configuration</h2>
       <p>
-        <em>To capture metrics you need to...</em>
+        In Datadog:
       </p>
       <ol>
-        <li>Configure (
-          <a href="http://link_to_your_documentation">see doc<a/>)<br>
-          <pre class="textfile">
-            <code>
-Use escaped text between &lt;code&gt; section 
-            </code>
-           </pre>
-        </li>
-        <li>Configure .... to monitor<br>
-        Edit ${confd_help('<code>conf.d/%s.yaml</code>' % agent_name)}
-        <pre class="textfile">
-          <code>
-Text instrutions for confugraing your integartion
-          </code>
-        </pre>
-       </li>
+        <li>Go to Integrations and click APIs.<br><img class="screenshot" src="Images/integrations.png" width="300"/></li>
+        <li>Click Create API Key.<br><img class="screenshot" src="Images/api-key.png" width="600"/></li>
+        <li>Copy the API key you just created.</li>
      </ol>
+     <p>
+       In Split:
+     </p>
+     <ol>
+       <li>Go to Admin Settings and click Integrations and navigate to the Marketplace. Click Add next to Datadog.<br><img class="screenshot" src="Images/in-split.png" width="800"/></li>
+       <li>Paste the API Key you copied in step 3 and click Save.<br><img class="screenshot" src="Images/integrations-datadog.png" width="800"/></li>
+       <li>Copy the API key you just created.</li>
+    </ol>
+    <p>
+      Split data should now be flowing into Datadog.
+    </p>
    </div>
 </body>
 </html>
