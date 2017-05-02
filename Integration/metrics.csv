@@ -1,48 +1,201 @@
-metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
-postgresql.connections,gauge,,connection,,The number of active connections to this database.,0,postgres,pg conns
-postgresql.commits,gauge,,transaction,second,The number of transactions that have been committed in this database.,0,postgres,pg commits
-postgresql.rollbacks,gauge,,transaction,second,The number of transactions that have been rolled back in this database.,-1,postgres,pg rollbacks
-postgresql.disk_read,gauge,,block,second,The number of disk blocks read in this database.,0,postgres,pg disk read
-postgresql.buffer_hit,gauge,,hit,second,"The number of times disk blocks were found in the buffer cache, preventing the need to read from the database. ",1,postgres,pg buff hit
-postgresql.rows_returned,gauge,,row,second,The number of rows returned by queries in this database,0,postgres,pg rows ret
-postgresql.rows_fetched,gauge,,row,second,The number of rows fetched by queries in this database,0,postgres,pg rows fetch
-postgresql.rows_inserted,gauge,,row,second,The number of rows inserted by queries in this database,0,postgres,pg rows insrt
-postgresql.rows_updated,gauge,,row,second,The number of rows updated by queries in this database,0,postgres,pg rows updt
-postgresql.rows_deleted,gauge,,row,second,The number of rows deleted by queries in this database,0,postgres,pg rows del
-postgresql.database_size,gauge,,byte,,The disk space used by this database.,0,postgres,pg db size
-postgresql.deadlocks,gauge,,,,The number of deadlocks detected in this database,-1,postgres,pg deadlocks
-postgresql.temp_bytes,gauge,,byte,second,The amount of data written to temporary files by queries in this database.,0,postgres,pg temp bytes
-postgresql.temp_files,gauge,,file,second,The number of temporary files created by queries in this database.,0,postgres,pg temp files
-postgresql.bgwriter.checkpoints_timed,count,,,,The number of scheduled checkpoints that were performed.,0,postgres,pg bgw cp timed
-postgresql.bgwriter.checkpoints_requested,count,,,,The number of requested checkpoints that were performed.,0,postgres,pg bgw cp req
-postgresql.bgwriter.buffers_checkpoint,count,,,,The number of buffers written during checkpoints.,0,postgres,pg bgw buff cp
-postgresql.bgwriter.buffers_clean,count,,,,The number of buffers written by the background writer.,0,postgres,pg bgw buff clean
-postgresql.bgwriter.maxwritten_clean,count,,,,The number of times the background writer stopped a cleaning scan due to writing too many buffers.,0,postgres,pg bgw maxwr clean
-postgresql.bgwriter.buffers_backend,count,,buffer,,The number of buffers written directly by a backend.,0,postgres,pg bgw buff bkend
-postgresql.bgwriter.buffers_alloc,count,,,,The number of buffers allocated,0,postgres,pg bgw buff alloc
-postgresql.bgwriter.buffers_backend_fsync,count,,,,The of times a backend had to execute its own fsync call instead of the background writer.,0,postgres,pg bgw buff bkend fsync
-postgresql.bgwriter.write_time,count,,millisecond,,The total amount of checkpoint processing time spent writing files to disk.,0,postgres,pg bgw wrt time
-postgresql.bgwriter.sync_time,count,,millisecond,,The total amount of checkpoint processing time spent synchronizing files to disk.,0,postgres,pg bgw sync time
-postgresql.locks,gauge,,lock,,The number of locks active for this database.,0,postgres,pg locks
-postgresql.seq_scans,gauge,,,,The number of sequential scans initiated on this table.,0,postgres,pg seq scans
-postgresql.seq_rows_read,gauge,,row,second,The number of live rows fetched by sequential scans.,0,postgres,pg seq rows rd
-postgresql.index_scans,gauge,,,,The number of index scans initiated on this table.,0,postgres,pg idx scans
-postgresql.index_rows_fetched,gauge,,row,second,The number of live rows fetched by index scans.,0,postgres,pg idx rows fetch
-postgresql.rows_hot_updated,gauge,,row,second,"The number of rows HOT updated, meaning no separate index update was needed.",0,postgres,pg rows hot updated
-postgresql.live_rows,gauge,,row,,The estimated number of live rows.,0,postgres,pg live rows
-postgresql.dead_rows,gauge,,row,,The estimated number of dead rows.,0,postgres,pg dead rows
-postgresql.index_rows_read,gauge,,row,second,The number of index entries returned by scans on this index.,0,postgres,pg idx rows read
-postgresql.table_size,gauge,,byte,,"The total disk space used by the specified table. Includes TOAST, free space map, and visibility map. Excludes indexes.",0,postgres,pg tbl size
-postgresql.index_size,gauge,,byte,,The total disk space used by indexes attached to the specified table.,0,postgres,pg idx size
-postgresql.total_size,gauge,,byte,,"The total disk space used by the table, including indexes and TOAST data.",0,postgres,pg tot size
-postgresql.table.count,gauge,,table,,The number of user tables in this database.,0,postgres,pg tbl count
-postgresql.max_connections,gauge,,connection,, The maximum number of client connections allowed to this database.,0,postgres,pg max conns
-postgresql.percent_usage_connections,gauge,,fraction,,The number of connections to this database as a fraction of the maximum number of allowed connections.,0,postgres,pg pct usg conns
-postgresql.heap_blocks_read,gauge,,block,second,The number of disk blocks read from this table.,0,postgres,pg heap blks read
-postgresql.heap_blocks_hit,gauge,,hit,second,The number of buffer hits in this table.,0,postgres,pg heap blks hit
-postgresql.index_blocks_read,gauge,,block,second,The number of disk blocks read from all indexes on this table.,0,postgres,pg idx blks read
-postgresql.index_blocks_hit,gauge,,hit,second,The number of buffer hits in all indexes on this table.,0,postgres,pg idx blks hit
-postgresql.toast_blocks_read,gauge,,block,second,The number of disk blocks read from this table's TOAST table.,0,postgres,pg toast blks read
-postgresql.toast_blocks_hit,gauge,,hit,second,The number of buffer hits in this table's TOAST table.,0,postgres,pg toast blks hit
-postgresql.toast_index_blocks_read,gauge,,block,second,The number of disk blocks read from this table's TOAST table index.,0,postgres,pg toast idx blks read
-postgresql.toast_index_blocks_hit,gauge,,block,second,The number of buffer hits in this table's TOAST table index.,0,postgres,pg toast idx blks hit
+short_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+lightbend.actors.running_actors,gauge,,,,Total number of running actors in this actor class or group.,0,Lightbend Reactive Platform,lrp tot run act
+lightbend.actors.mailbox_size.max,gauge,,message,,Maximum number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz max
+lightbend.actors.mailbox_size.mean,gauge,,message,,Average number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz avg
+lightbend.actors.mailbox_size.median,gauge,,message,,Median number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz med
+lightbend.actors.mailbox_size.min,gauge,,message,,Minimum number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz min
+lightbend.actors.mailbox_size.p75,gauge,,message,,75th percentile number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz p75
+lightbend.actors.mailbox_size.p95,gauge,,message,,95th percentile number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz p95
+lightbend.actors.mailbox_size.p98,gauge,,message,,98th percentile number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz p98
+lightbend.actors.mailbox_size.p99,gauge,,message,,99th percentile number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz p99
+lightbend.actors.mailbox_size.p999,gauge,,message,,99.9th percentile number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz p999
+lightbend.actors.mailbox_size.stddev,gauge,,message,,Standard deviation for the number of messages in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox sz stdev
+lightbend.actors.mailbox_time.max,gauge,,nanosecond,,Maximum time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm max
+lightbend.actors.mailbox_time.mean,gauge,,nanosecond,,Average time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm avg
+lightbend.actors.mailbox_time.median,gauge,,nanosecond,,Median time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm med
+lightbend.actors.mailbox_time.min,gauge,,nanosecond,,Minimum time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm min
+lightbend.actors.mailbox_time.p75,gauge,,nanosecond,,75th percentile time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm p75
+lightbend.actors.mailbox_time.p95,gauge,,nanosecond,,95th percentile time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm p95
+lightbend.actors.mailbox_time.p98,gauge,,nanosecond,,98th percentile time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm p98
+lightbend.actors.mailbox_time.p99,gauge,,nanosecond,,99th percentile time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm p99
+lightbend.actors.mailbox_time.p999,gauge,,nanosecond,,99.9th percentile time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm p999
+lightbend.actors.mailbox_time.stddev,gauge,,nanosecond,,Standard deviation for the time that messages are in an actor's mailbox.,0,Lightbend Reactive Platform,lrp mbox tm stdev
+lightbend.actors.processed_messages.mean_rate,gauge,,message,second,Average rate of messages processed by an actor.,0,Lightbend Reactive Platform,lrp proc msgs mean
+lightbend.actors.processed_messages.min1_rate,gauge,,message,second,1 minute rate of messages processed by an actor.,0,Lightbend Reactive Platform,lrp proc msgs 1 min
+lightbend.actors.processed_messages.min15_rate,gauge,,message,second,15 minute rate of messages processed by an actor.,0,Lightbend Reactive Platform,lrp proc msgs 15 min
+lightbend.actors.processed_messages.min5_rate,gauge,,message,second,5 minute rate of messages processed by an actor.,0,Lightbend Reactive Platform,lrp proc msgs 5 min
+lightbend.actors.processed_messages.samples,gauge,,message,second,Total number of messages processed by an actor.,0,Lightbend Reactive Platform,lrp proc msgs total
+lightbend.actors.processing_time.max,gauge,,nanosecond,,Maximum time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm max
+lightbend.actors.processing_time.mean,gauge,,nanosecond,,Average time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm avg
+lightbend.actors.processing_time.median,gauge,,nanosecond,,Median time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm med
+lightbend.actors.processing_time.min,gauge,,nanosecond,,Minimum time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm min
+lightbend.actors.processing_time.p75,gauge,,nanosecond,,75th percentile time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm p75
+lightbend.actors.processing_time.p95,gauge,,nanosecond,,95th percentile time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm p95
+lightbend.actors.processing_time.p98,gauge,,nanosecond,,98th percentile time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm p98
+lightbend.actors.processing_time.p99,gauge,,nanosecond,,99th percentile time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm p99
+lightbend.actors.processing_time.p999,gauge,,nanosecond,,99.9th percentile time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm p999
+lightbend.actors.processing_time.stddev,gauge,,nanosecond,,Standard deviation for the time for actor message processing.,0,Lightbend Reactive Platform,lrp proc tm stdev
+lightbend.actors.sent_messages.mean_rate,gauge,,message,second,Average rate of messages sent by an actor.,0,Lightbend Reactive Platform,lrp msgs sen mean
+lightbend.actors.sent_messages.min1_rate,gauge,,message,second,1 minute rate of messages sent by an actor.,0,Lightbend Reactive Platform,lrp msgs sen 1 min
+lightbend.actors.sent_messages.min15_rate,gauge,,message,second,15 minute rate of messages sent by an actor.,0,Lightbend Reactive Platform,lrp msgs sen 15 min
+lightbend.actors.sent_messages.min5_rate,gauge,,message,second,5 minute rate of messages sent by an actor.,0,Lightbend Reactive Platform,lrp msgs sen 5 min
+lightbend.actors.sent_messages.samples,gauge,,message,second,Total number of messages sent by an actor.,0,Lightbend Reactive Platform,lrp msgs sen total
+lightbend.actors.stash_size.max,gauge,,message,,Maximum number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz max
+lightbend.actors.stash_size.mean,gauge,,message,,Average number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz avg
+lightbend.actors.stash_size.median,gauge,,message,,Median number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz med
+lightbend.actors.stash_size.min,gauge,,message,,Minimum number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz min
+lightbend.actors.stash_size.p75,gauge,,message,,75th percentile number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz p75
+lightbend.actors.stash_size.p95,gauge,,message,,95th percentile number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz p95
+lightbend.actors.stash_size.p98,gauge,,message,,98th percentile number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz p98
+lightbend.actors.stash_size.p99,gauge,,message,,99th percentile number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz p99
+lightbend.actors.stash_size.p999,gauge,,message,,99.9th percentile number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz p999
+lightbend.actors.stash_size.stddev,gauge,,message,,Standard deviation for the number of messages in an actor's stash.,0,Lightbend Reactive Platform,lrp stash sz stdev
+lightbend.actors.actor_failure.mean_rate,gauge,,error,second,Average rate of actor failures.,0,Lightbend Reactive Platform,lrp fail mean
+lightbend.actors.actor_failure.min1_rate,gauge,,error,second,1 minute rate of actor failures.,0,Lightbend Reactive Platform,lrp fail 1 min
+lightbend.actors.actor_failure.min15_rate,gauge,,error,second,15 minute rate of actor failures.,0,Lightbend Reactive Platform,lrp fail 15 min
+lightbend.actors.actor_failure.min5_rate,gauge,,error,second,5 minute rate of actor failures.,0,Lightbend Reactive Platform,lrp fail 5 min
+lightbend.actors.actor_failure.samples,gauge,,error,second,Total number of actor failures.,0,Lightbend Reactive Platform,lrp fail total
+lightbend.actors.dead_letter.mean_rate,gauge,,event,second,Average rate of actor dead letters.,0,Lightbend Reactive Platform,lrp dl mean
+lightbend.actors.dead_letter.min1_rate,gauge,,event,second,1 minute rate of actor dead letters.,0,Lightbend Reactive Platform,lrp dl 1 min
+lightbend.actors.dead_letter.min15_rate,gauge,,event,second,15 minute rate of actor dead letters.,0,Lightbend Reactive Platform,lrp dl 15 min
+lightbend.actors.dead_letter.min5_rate,gauge,,event,second,5 minute rate of actor dead letters.,0,Lightbend Reactive Platform,lrp dl 5 min
+lightbend.actors.dead_letter.samples,gauge,,event,second,Total number of actor dead letters.,0,Lightbend Reactive Platform,lrp dl total
+lightbend.actors.unhandled_message.mean_rate,gauge,,event,second,Average rate of unhandled actor messages.,0,Lightbend Reactive Platform,lrp unh msgs mean
+lightbend.actors.unhandled_message.min1_rate,gauge,,event,second,1 minute rate of unhandled actor messages.,0,Lightbend Reactive Platform,lrp unh msgs 1 min
+lightbend.actors.unhandled_message.min15_rate,gauge,,event,second,15 minute rate of unhandled actor messages.,0,Lightbend Reactive Platform,lrp unh msgs 15 min
+lightbend.actors.unhandled_message.min5_rate,gauge,,event,second,5 minute rate of unhandled actor messages.,0,Lightbend Reactive Platform,lrp unh msgs 5 min
+lightbend.actors.unhandled_message.samples,gauge,,event,second,Total number of unhandled actor messages.,0,Lightbend Reactive Platform,lrp unh msgs total
+lightbend.actors.log_error.mean_rate,gauge,,error,second,Average rate of actor log errors.,0,Lightbend Reactive Platform,lrp err mean
+lightbend.actors.log_error.min1_rate,gauge,,error,second,1 minute rate of actor log errors.,0,Lightbend Reactive Platform,lrp err 1 min
+lightbend.actors.log_error.min15_rate,gauge,,error,second,15 minute rate of actor log errors.,0,Lightbend Reactive Platform,lrp err 15 min
+lightbend.actors.log_error.min5_rate,gauge,,error,second,5 minute rate of actor log errors.,0,Lightbend Reactive Platform,lrp err 5 min
+lightbend.actors.log_error.samples,gauge,,error,second,Total number of actor log errors.,0,Lightbend Reactive Platform,lrp err total
+lightbend.actors.log_warning.mean_rate,gauge,,event,second,Average rate of actor log warnings.,0,Lightbend Reactive Platform,lrp warn mean
+lightbend.actors.log_warning.min1_rate,gauge,,event,second,1 minute rate of actor log warnings.,0,Lightbend Reactive Platform,lrp warn 1 min
+lightbend.actors.log_warning.min15_rate,gauge,,event,second,15 minute rate of actor log warnings.,0,Lightbend Reactive Platform,lrp warn 15 min
+lightbend.actors.log_warning.min5_rate,gauge,,event,second,5 minute rate of actor log warnings.,0,Lightbend Reactive Platform,lrp warn 5 min
+lightbend.actors.log_warning.samples,gauge,,event,second,Total number of actor log warnings.,0,Lightbend Reactive Platform,lrp warn total
+lightbend.actors.mailbox_size_limit.mean_rate,gauge,,event,second,Average rate of threshold limit events for actor mailbox size.,0,Lightbend Reactive Platform,lrp mbox sz ev mean
+lightbend.actors.mailbox_size_limit.min1_rate,gauge,,event,second,1 minute rate of threshold limit events for actor mailbox size.,0,Lightbend Reactive Platform,lrp mbox sz ev 1 min
+lightbend.actors.mailbox_size_limit.min15_rate,gauge,,event,second,15 minute rate of threshold limit events for actor mailbox size.,0,Lightbend Reactive Platform,lrp mbox sz ev 15 min
+lightbend.actors.mailbox_size_limit.min5_rate,gauge,,event,second,5 minute rate of threshold limit events for actor mailbox size.,0,Lightbend Reactive Platform,lrp mbox sz ev 5 min
+lightbend.actors.mailbox_size_limit.samples,gauge,,event,second,Total number of threshold limit events for actor mailbox size.,0,Lightbend Reactive Platform,lrp mbox sz ev total
+lightbend.actors.mailbox_time_limit.mean_rate,gauge,,event,second,Average rate of threshold limit events for time in actor mailbox.,0,Lightbend Reactive Platform,lrp mbox tm ev mean
+lightbend.actors.mailbox_time_limit.min1_rate,gauge,,event,second,1 minute rate of threshold limit events for time in actor mailbox.,0,Lightbend Reactive Platform,lrp mbox tm ev 1 min
+lightbend.actors.mailbox_time_limit.min15_rate,gauge,,event,second,15 minute rate of threshold limit events for time in actor mailbox.,0,Lightbend Reactive Platform,lrp mbox tm ev 15 min
+lightbend.actors.mailbox_time_limit.min5_rate,gauge,,event,second,5 minute rate of threshold limit events for time in actor mailbox.,0,Lightbend Reactive Platform,lrp mbox tm ev 5 min
+lightbend.actors.mailbox_time_limit.samples,gauge,,event,second,Total number of threshold limit events for time in actor mailbox.,0,Lightbend Reactive Platform,lrp mbox tm ev total
+lightbend.actors.processing_time_limit.mean_rate,gauge,,message,second,Average rate of threshold limit events for actor message processing time.,0,Lightbend Reactive Platform,lrp proc tm ev mean
+lightbend.actors.processing_time_limit.min1_rate,gauge,,message,second,1 minute rate of threshold limit events for actor message processing time.,0,Lightbend Reactive Platform,lrp proc tm ev 1 min
+lightbend.actors.processing_time_limit.min15_rate,gauge,,message,second,15 minute rate of threshold limit events for actor message processing time.,0,Lightbend Reactive Platform,lrp proc tm ev 15 min
+lightbend.actors.processing_time_limit.min5_rate,gauge,,message,second,5 minute rate of threshold limit events for actor message processing time.,0,Lightbend Reactive Platform,lrp proc tm ev 5 min
+lightbend.actors.processing_time_limit.samples,gauge,,message,second,Total number of threshold limit events for actor message processing time.,0,Lightbend Reactive Platform,lrp proc tm ev total
+lightbend.actors.stash_size_limit.mean_rate,gauge,,message,second,Average rate of threshold limit events for actor stash size.,0,Lightbend Reactive Platform,lrp stash sz ev mean
+lightbend.actors.stash_size_limit.min1_rate,gauge,,message,second,1 minute rate of threshold limit events for actor stash size.,0,Lightbend Reactive Platform,lrp stash sz ev 1 min
+lightbend.actors.stash_size_limit.min15_rate,gauge,,message,second,15 minute rate of threshold limit events for actor stash size.,0,Lightbend Reactive Platform,lrp stash sz ev 15 min
+lightbend.actors.stash_size_limit.min5_rate,gauge,,message,second,5 minute rate of threshold limit events for actor stash size.,0,Lightbend Reactive Platform,lrp stash sz ev 5 min
+lightbend.actors.stash_size_limit.samples,gauge,,message,second,Total number of threshold limit events for actor stash size.,0,Lightbend Reactive Platform,lrp stash sz ev total
+lightbend.dispatchers.processing,gauge,,task,,Current number of tasks being processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc
+lightbend.dispatchers.processing_time.max,gauge,,nanosecond,,Maximum time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm max
+lightbend.dispatchers.processing_time.mean,gauge,,nanosecond,,Average time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm avg
+lightbend.dispatchers.processing_time.median,gauge,,nanosecond,,Median time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm med
+lightbend.dispatchers.processing_time.min,gauge,,nanosecond,,Minimum time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm min
+lightbend.dispatchers.processing_time.p75,gauge,,nanosecond,,75th percentile time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm p75
+lightbend.dispatchers.processing_time.p95,gauge,,nanosecond,,95th percentile time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm p95
+lightbend.dispatchers.processing_time.p98,gauge,,nanosecond,,98th percentile time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm p98
+lightbend.dispatchers.processing_time.p99,gauge,,nanosecond,,99th percentile time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm p99
+lightbend.dispatchers.processing_time.p999,gauge,,nanosecond,,99.9th percentile time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm p999
+lightbend.dispatchers.processing_time.stddev,gauge,,nanosecond,,Standard deviation for the time for processing tasks in a dispatcher.,0,Lightbend Reactive Platform,lrp disp proc tm stdev
+lightbend.dispatchers.queue_size,gauge,,task,,Current number of tasks queued to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q sz
+lightbend.dispatchers.queue_time.max,gauge,,nanosecond,,Maximum queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm max
+lightbend.dispatchers.queue_time.mean,gauge,,nanosecond,,Average queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm avg
+lightbend.dispatchers.queue_time.median,gauge,,nanosecond,,Median queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm med
+lightbend.dispatchers.queue_time.min,gauge,,nanosecond,,Minimum queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm min
+lightbend.dispatchers.queue_time.p75,gauge,,nanosecond,,75th percentile queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm p75
+lightbend.dispatchers.queue_time.p95,gauge,,nanosecond,,95th percentile queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm p95
+lightbend.dispatchers.queue_time.p98,gauge,,nanosecond,,98th percentile queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm p98
+lightbend.dispatchers.queue_time.p99,gauge,,nanosecond,,99th percentile queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm p99
+lightbend.dispatchers.queue_time.p999,gauge,,nanosecond,,99.9th percentile queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm p999
+lightbend.dispatchers.queue_time.stddev,gauge,,nanosecond,,Standard deviation for the queue time for tasks waiting to be processed by a dispatcher.,0,Lightbend Reactive Platform,lrp disp q tm stdev
+lightbend.dispatchers.parallelism,gauge,,,,Parallelism setting for a fork/join thread pool.,0,Lightbend Reactive Platform,lrp disp paral
+lightbend.dispatchers.pool_size,gauge,,,,Current size of a thread pool.,0,Lightbend Reactive Platform,lrp disp pool sz
+lightbend.dispatchers.active_threads,gauge,,thread,,Estimate of the number of active threads in a thread pool.,0,Lightbend Reactive Platform,lrp disp act thr
+lightbend.dispatchers.running_threads,gauge,,thread,,Estimate of the number of running threads (not blocked) in a fork/join thread pool.,0,Lightbend Reactive Platform,lrp disp run thr
+lightbend.dispatchers.queued_tasks,gauge,,task,,Estimate of the number of queued tasks in a fork/join thread pool.,0,Lightbend Reactive Platform,lrp disp q tsk
+lightbend.actors.remote_sent_messages.mean_rate,gauge,,message,second,Average rate of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen mean
+lightbend.actors.remote_sent_messages.min1_rate,gauge,,message,second,1 minute rate of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen 1 min
+lightbend.actors.remote_sent_messages.min15_rate,gauge,,message,second,15 minute rate of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen 15 min
+lightbend.actors.remote_sent_messages.min5_rate,gauge,,message,second,5 minute rate of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen 5 min
+lightbend.actors.remote_sent_messages.samples,gauge,,message,second,Total number of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen total
+lightbend.actors.remote_received_messages.mean_rate,gauge,,message,second,Average rate of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec mean
+lightbend.actors.remote_received_messages.min1_rate,gauge,,message,second,1 minute rate of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec 1 min
+lightbend.actors.remote_received_messages.min15_rate,gauge,,message,second,15 minute rate of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec 15 min
+lightbend.actors.remote_received_messages.min5_rate,gauge,,message,second,5 minute rate of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec 5 min
+lightbend.actors.remote_received_messages.samples,gauge,,message,second,Total number of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec total
+lightbend.actors.remote_sent_message_size.max,gauge,,byte,,Maximum size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen max
+lightbend.actors.remote_sent_message_size.mean,gauge,,byte,,Average size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen avg
+lightbend.actors.remote_sent_message_size.median,gauge,,byte,,Median size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen med
+lightbend.actors.remote_sent_message_size.min,gauge,,byte,,Minimum size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen min
+lightbend.actors.remote_sent_message_size.p75,gauge,,byte,,75th percentile size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen p75
+lightbend.actors.remote_sent_message_size.p95,gauge,,byte,,95th percentile size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen p95
+lightbend.actors.remote_sent_message_size.p98,gauge,,byte,,98th percentile size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen p98
+lightbend.actors.remote_sent_message_size.p99,gauge,,byte,,99th percentile size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen p99
+lightbend.actors.remote_sent_message_size.p999,gauge,,byte,,99.9th percentile size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen p999
+lightbend.actors.remote_sent_message_size.stddev,gauge,,byte,,Standard deviation for the size of remote messages sent.,0,Lightbend Reactive Platform,lrp r msgs sen stdev
+lightbend.actors.remote_received_message_size.max,gauge,,byte,,Maximum size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec max
+lightbend.actors.remote_received_message_size.mean,gauge,,byte,,Average size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec avg
+lightbend.actors.remote_received_message_size.median,gauge,,byte,,Median size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec med
+lightbend.actors.remote_received_message_size.min,gauge,,byte,,Minimum size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec min
+lightbend.actors.remote_received_message_size.p75,gauge,,byte,,75th percentile size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec p75
+lightbend.actors.remote_received_message_size.p95,gauge,,byte,,95th percentile size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec p95
+lightbend.actors.remote_received_message_size.p98,gauge,,byte,,98th percentile size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec p98
+lightbend.actors.remote_received_message_size.p99,gauge,,byte,,99th percentile size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec p99
+lightbend.actors.remote_received_message_size.p999,gauge,,byte,,99.9th percentile size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec p999
+lightbend.actors.remote_received_message_size.stddev,gauge,,byte,,Standard deviation for the size of remote messages received.,0,Lightbend Reactive Platform,lrp r msgs rec stdev
+lightbend.actors.remote_serialization_time.max,gauge,,nanosecond,,Maximum time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm max
+lightbend.actors.remote_serialization_time.mean,gauge,,nanosecond,,Average time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm avg
+lightbend.actors.remote_serialization_time.median,gauge,,nanosecond,,Median time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm med
+lightbend.actors.remote_serialization_time.min,gauge,,nanosecond,,Minimum time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm min
+lightbend.actors.remote_serialization_time.p75,gauge,,nanosecond,,75th percentile time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm p75
+lightbend.actors.remote_serialization_time.p95,gauge,,nanosecond,,95th percentile time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm p95
+lightbend.actors.remote_serialization_time.p98,gauge,,nanosecond,,98th percentile time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm p98
+lightbend.actors.remote_serialization_time.p99,gauge,,nanosecond,,99th percentile time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm p99
+lightbend.actors.remote_serialization_time.p999,gauge,,nanosecond,,99.9th percentile time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm p999
+lightbend.actors.remote_serialization_time.stddev,gauge,,nanosecond,,Standard deviation for the time for serialization of remote messages.,0,Lightbend Reactive Platform,lrp ser tm stdev
+lightbend.actors.remote_deserialization_time.max,gauge,,nanosecond,,Maximum time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm max
+lightbend.actors.remote_deserialization_time.mean,gauge,,nanosecond,,Average time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm avg
+lightbend.actors.remote_deserialization_time.median,gauge,,nanosecond,,Median time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm med
+lightbend.actors.remote_deserialization_time.min,gauge,,nanosecond,,Minimum time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm min
+lightbend.actors.remote_deserialization_time.p75,gauge,,nanosecond,,75th percentile time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm p75
+lightbend.actors.remote_deserialization_time.p95,gauge,,nanosecond,,95th percentile time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm p95
+lightbend.actors.remote_deserialization_time.p98,gauge,,nanosecond,,98th percentile time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm p98
+lightbend.actors.remote_deserialization_time.p99,gauge,,nanosecond,,99th percentile time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm p99
+lightbend.actors.remote_deserialization_time.p999,gauge,,nanosecond,,99.9th percentile time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm p999
+lightbend.actors.remote_deserialization_time.stddev,gauge,,nanosecond,,Standard deviation for the time for deserialization of remote messages.,0,Lightbend Reactive Platform,lrp deser tm stdev
+lightbend.actors.remote_large_message_sent.mean_rate,gauge,,event,second,Average rate of threshold limit events for large remote messages sent.,0,Lightbend Reactive Platform,lrp lg r msgs sen mean
+lightbend.actors.remote_large_message_sent.min1_rate,gauge,,event,second,1 minute rate of threshold limit events for large remote messages sent.,0,Lightbend Reactive Platform,lrp lg r msgs sen 1 min
+lightbend.actors.remote_large_message_sent.min15_rate,gauge,,event,second,15 minute rate of threshold limit events for large remote messages sent.,0,Lightbend Reactive Platform,lrp lg r msgs sen 15 min
+lightbend.actors.remote_large_message_sent.min5_rate,gauge,,event,second,5 minute rate of threshold limit events for large remote messages sent.,0,Lightbend Reactive Platform,lrp lg r msgs sen 5 min
+lightbend.actors.remote_large_message_sent.samples,gauge,,event,second,Total number of threshold limit events for large remote messages sent.,0,Lightbend Reactive Platform,lrp lg r msgs sen total
+lightbend.actors.remote_large_message_received.mean_rate,gauge,,event,second,Average rate of threshold limit events for large remote messages received.,0,Lightbend Reactive Platform,lrp lg r msgs rec mean
+lightbend.actors.remote_large_message_received.min1_rate,gauge,,event,second,1 minute rate of threshold limit events for large remote messages received.,0,Lightbend Reactive Platform,lrp lg r msgs rec 1 min
+lightbend.actors.remote_large_message_received.min15_rate,gauge,,event,second,15 minute rate of threshold limit events for large remote messages received.,0,Lightbend Reactive Platform,lrp lg r msgs rec 15 min
+lightbend.actors.remote_large_message_received.min5_rate,gauge,,event,second,5 minute rate of threshold limit events for large remote messages received.,0,Lightbend Reactive Platform,lrp lg r msgs rec 5 min
+lightbend.actors.remote_large_message_received.samples,gauge,,event,second,Total number of threshold limit events for large remote messages received.,0,Lightbend Reactive Platform,lrp lg r msgs rec total
+lightbend.remote_nodes.cluster_domain_event.mean_rate,gauge,,event,second,Average rate of Akka cluster domain events.,0,Lightbend Reactive Platform,lrp cl dom ev mean
+lightbend.remote_nodes.cluster_domain_event.min1_rate,gauge,,event,second,1 minute rate of Akka cluster domain events.,0,Lightbend Reactive Platform,lrp cl dom ev 1 min
+lightbend.remote_nodes.cluster_domain_event.min15_rate,gauge,,event,second,15 minute rate of Akka cluster domain events.,0,Lightbend Reactive Platform,lrp cl dom ev 15 min
+lightbend.remote_nodes.cluster_domain_event.min5_rate,gauge,,event,second,5 minute rate of Akka cluster domain events.,0,Lightbend Reactive Platform,lrp cl dom ev 5 min
+lightbend.remote_nodes.cluster_domain_event.samples,gauge,,event,second,Total number of Akka cluster domain events.,0,Lightbend Reactive Platform,lrp cl dom ev total
+lightbend.remote_nodes.cluster_member_event.mean_rate,gauge,,event,second,Average rate of Akka cluster member events.,0,Lightbend Reactive Platform,lrp cl mem ev mean
+lightbend.remote_nodes.cluster_member_event.min1_rate,gauge,,event,second,1 minute rate of Akka cluster member events.,0,Lightbend Reactive Platform,lrp cl mem ev 1 min
+lightbend.remote_nodes.cluster_member_event.min15_rate,gauge,,event,second,15 minute rate of Akka cluster member events.,0,Lightbend Reactive Platform,lrp cl mem ev 15 min
+lightbend.remote_nodes.cluster_member_event.min5_rate,gauge,,event,second,5 minute rate of Akka cluster member events.,0,Lightbend Reactive Platform,lrp cl mem ev 5 min
+lightbend.remote_nodes.cluster_member_event.samples,gauge,,event,second,Total number of Akka cluster member events.,0,Lightbend Reactive Platform,lrp cl mem ev total
+lightbend.remote_nodes.node_quarantined_event.mean_rate,gauge,,event,second,Average rate of Akka remote node quarantined events.,0,Lightbend Reactive Platform,lrp node quar ev mean
+lightbend.remote_nodes.node_quarantined_event.min1_rate,gauge,,event,second,1 minute rate of Akka remote node quarantined events.,0,Lightbend Reactive Platform,lrp node quar ev 1 min
+lightbend.remote_nodes.node_quarantined_event.min15_rate,gauge,,event,second,15 minute rate of Akka remote node quarantined events.,0,Lightbend Reactive Platform,lrp node quar ev 15 min
+lightbend.remote_nodes.node_quarantined_event.min5_rate,gauge,,event,second,5 minute rate of Akka remote node quarantined events.,0,Lightbend Reactive Platform,lrp node quar ev 5 min
+lightbend.remote_nodes.node_quarantined_event.samples,gauge,,event,second,Total number of Akka remote node quarantined events.,0,Lightbend Reactive Platform,lrp node quar ev total
+lightbend.remote_nodes.phi_accrual_value,gauge,,,,Current phi accrual value for Akka remote node failure detection.,0,Lightbend Reactive Platform,lrp node phi
+lightbend.self_nodes.phi_accrual_threshold_value,gauge,,,,Current phi accrual threshold value for Akka remote node failure detection.,0,Lightbend Reactive Platform,lrp node phi thres 
