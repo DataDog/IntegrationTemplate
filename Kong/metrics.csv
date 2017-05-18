@@ -1,0 +1,9 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+kong.database.{table_name},gauge,,rows,second,The number rows in the {table_name} table.,0,kong,{table_name}
+kong.server.connections_accepted,gauge,,connections,second,The total number of accepted client connections.,0,kong,conn accepted
+kong.server.connections_active,gauge,,connections,second,The current number of active client connections including Waiting connections.,0,kong,conn active
+kong.server.connections_handled,gauge,,connections,second,The total number of handled connections. Generally, the parameter value is the same as accepts unless some resource limits have been reached.,0,kong,conn handled
+kong.server.connections_reading,gauge,,connections,second,The current number of connections where Kong is reading the request header.,0,kong,conn reading
+kong.server.connections_waiting,gauge,,connections,second,The current number of idle client connections waiting for a request.,0,kong,conn waiting
+kong.server.connections_writing,gauge,,connections,second,The current number of connections where nginx is writing the response back to the client.,0,kong,conn writing
+kong.server.total_requests,gauge,,requests,second,The total number of client requests.,0,kong,total req

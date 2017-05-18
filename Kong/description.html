@@ -1,0 +1,72 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Kong</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Secure, Manage & Extend your APIs and Microservices</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Connect Kong to Datadog to:</p>
+      <ul>
+        <li>Visualize Kong performance data</li>
+        <li>Correlate the performance of Kong with the rest of your applications</li>
+      </ul>
+      <!--
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+      -->
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To capture Kong metrics you need to install the Datadog Agent.</em>
+      </p>
+      <ol>
+        <li>Configure the Agent to connect to Kong<br>
+            Edit conf.d/kong.yaml <br>
+          <pre class="textfile">
+            <code>
+              init_config:
+
+              instances:
+              # For every instance, you have an `kong_status_url` and (optionally)
+              # a list of tags.
+
+                -   kong_status_url: http://example.com:8001/status/
+                    tags:
+                        -   instance:foo
+
+                -   kong_status_url: http://example2.com:8001/status/
+                    tags:
+                        -   instance:bar
+            </code>
+          </pre>   
+        </li>
+        <li>Restart the Agent</li>
+        <li>Execute the info command and verify that the integration check has passed</li>
+        <li>Select Integrations, and then select ‘Connect Datadog’</li>
+     </ol>
+   </div>
+</body>
+</html>
