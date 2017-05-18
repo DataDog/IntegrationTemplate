@@ -1,0 +1,85 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">HDFS Datanode</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>HDFS Datanode</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">HDFS Datanode</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">HDFS is a Java-based file system that provides scalable and reliable data storage, and it was designed to span large clusters of commodity servers</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Capture HDFS metrics for each DataNode in realtime to:</p>
+      <ul>
+        <li>Visualize cluster health, performance and utilization.</li>
+        <li>Analyze and inspect individual node utilization.</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>Install the Datadog Agent on each HDFS DataNode</em>
+      </p>
+      <ol>
+        <li>Configure the agent to connect to the JMX URI<br>
+        Edit ${confd_help('<code>conf.d/%s.yaml</code>' % agent_name)}
+        <pre class="textfile">
+          <code>
+init_config:
+
+instances:
+  #
+  # The HDFS DataNode check retrieves metrics from the HDFS DataNode's JMX
+  # interface. This check must be installed on a HDFS DataNode. The HDFS
+  # DataNode JMX URI is composed of the DataNode's hostname and port.
+  #
+  # The hostname and port can be found in the hdfs-site.xml conf file under
+  # the property dfs.datanode.http.address
+  #
+  - hdfs_datanode_jmx_uri: http://localhost:50075
+          </code>
+        </pre>
+        </li>
+
+        <li>Restart the Agent</li>
+
+        <li>Execute the info command and verify that the integration check passed. The output of the command should contain a section similar to the following:
+        <pre class="verification">
+          <code>
+  Checks
+  ======
+
+    [...]
+
+    hdfs_datanode
+    -------------
+      - instance #0 [OK]
+      - Collected 10 metrics, 0 events & 2 service checks
+          </code>
+        </pre>
+
+        </li>
+     </ol>
+   </div>
+</body>
+</html>

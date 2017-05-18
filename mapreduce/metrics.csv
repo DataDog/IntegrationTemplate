@@ -1,0 +1,131 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+mapreduce.job.elapsed_time.max,gauge,,millisecond,,The max elapsed time since the application started,0,mapreduce,jb time mx
+mapreduce.job.elapsed_time.avg,gauge,,millisecond,,The average elapsed time since the application started,0,mapreduce,jb time avg
+mapreduce.job.elapsed_time.median,gauge,,millisecond,,The median elapsed time since the application started,0,mapreduce,jb time mx med
+mapreduce.job.elapsed_time.95percentile,gauge,,millisecond,,The 95th percentile elapsed time since the application started,0,mapreduce,jb time mx 95
+mapreduce.job.elapsed_time.count,rate,,,,The number of times the elapsed time was sampled,0,mapreduce,jb time mx cnt
+mapreduce.job.maps_total.max,gauge,,task,,The max max total number of maps,0,mapreduce,jb mps mx
+mapreduce.job.maps_total.avg,gauge,,task,,The avg total number of maps,0,mapreduce,jb mps avg
+mapreduce.job.maps_total.median,gauge,,task,,The median total number of maps,0,mapreduce,jb mps med
+mapreduce.job.maps_total95percentile,gauge,,task,,The 95th percentile total number of maps,0,mapreduce,jb mps 95
+mapreduce.job.maps_total.count,rate,,,,The number of times the max total was sampled,0,mapreduce,jb mps cnt
+mapreduce.job.maps_completed.max,gauge,,task,,The max number of completed maps,0,mapreduce,jb mp com mx
+mapreduce.job.maps_completed.avg,gauge,,task,,The average number of completed maps,0,mapreduce,jb mp com avg
+mapreduce.job.maps_completed.median,gauge,,task,,The median number of completed maps,0,mapreduce,jb mp com med
+mapreduce.job.maps_completed.95percentile,gauge,,task,,The 95th percentile number of completed maps,0,mapreduce,jb mp com 95
+mapreduce.job.maps_completed.count,rate,,,,The number of times the number of completed maps were sampled,0,mapreduce,jb mp com cnt
+mapreduce.job.reduces_total.max,gauge,,task,,The max total number of reduces,0,mapreduce,jb red mx
+mapreduce.job.reduces_total.avg,gauge,,task,,The average total number of reduces,0,mapreduce,jb red avg
+mapreduce.job.reduces_total.median,gauge,,task,,The median total number of reduces,0,mapreduce,jb red med
+mapreduce.job.reduces_total.95percentile,gauge,,task,,The 95th percentile total number of reduces,0,mapreduce,jb red 95
+mapreduce.job.reduces_total.count,rate,,,,The number of times the total number of reduces were sampled,0,mapreduce,jb red cnt
+mapreduce.job.reduces_completed.max,gauge,,task,,The max number of completed reduces,0,mapreduce,jb red comp mx
+mapreduce.job.reduces_completed.avg,gauge,,task,,The average number of completed reduces,0,mapreduce,jb red comp avg
+mapreduce.job.reduces_completed.median,gauge,,task,,The median number of completed reduces,0,mapreduce,jb red comp med
+mapreduce.job.reduces_completed.95percentile,gauge,,task,,The 95th percentile number of completed reduces,0,mapreduce,jb red comp 95
+mapreduce.job.reduces_completed.count,rate,,,,The number of times the number of completed reduces were sampled,0,mapreduce,jb red comp cnt
+mapreduce.job.maps_pending.max,gauge,,task,,The max number of maps still to be run,0,mapreduce,jb mp pen mx
+mapreduce.job.maps_pending.avg,gauge,,task,,The average number of maps still to be run,0,mapreduce,jb mp pen avg
+mapreduce.job.maps_pending.median,gauge,,task,,The median number of maps still to be run,0,mapreduce,jb mp pen med
+mapreduce.job.maps_pending.95percentile,gauge,,task,,The 95th percentile number of maps still to be run,0,mapreduce,jb mp pen 95
+mapreduce.job.maps_pending.count,rate,,,,The number of times the number of maps still to be run were sampled,0,mapreduce,jb mp pen cnt
+mapreduce.job.maps_running.max,gauge,,task,,The max number of running maps,0,mapreduce,jb mp run mx
+mapreduce.job.maps_running.avg,gauge,,task,,The average number of running maps,0,mapreduce,jb mp run avg
+mapreduce.job.maps_running.median,gauge,,task,,The median number of running maps,0,mapreduce,jb mp run med
+mapreduce.job.maps_running.95percentile,gauge,,task,,The 95th percentile number of running maps,0,mapreduce,jb mp run 95
+mapreduce.job.maps_running.count,rate,,,,The number of times the number of running maps were sampled,0,mapreduce,jb mp run cnt
+mapreduce.job.reduces_pending.max,gauge,,task,,The max number of reduces still to be run,0,mapreduce,jb red pen mx
+mapreduce.job.reduces_pending.avg,gauge,,task,,The average number of reduces still to be run,0,mapreduce,jb red pen avg
+mapreduce.job.reduces_pending.median,gauge,,task,,The median number of reduces still to be run,0,mapreduce,jb red pen med
+mapreduce.job.reduces_pending.95percentile,gauge,,task,,The 95th percentile number of reduces still to be run,0,mapreduce,jb red pen 95
+mapreduce.job.reduces_pending.count,rate,,,,The number of times the number of reduces still to be run were sampled,0,mapreduce,jb red pen cnt
+mapreduce.job.reduces_running.max,gauge,,task,,The max number of running reduces,0,mapreduce,jb red run mx
+mapreduce.job.reduces_running.avg,gauge,,task,,The average number of running reduces,0,mapreduce,jb red run avg
+mapreduce.job.reduces_running.median,gauge,,task,,The median number of running reduces,0,mapreduce,jb red run med
+mapreduce.job.reduces_running.95percentile,gauge,,task,,The 95th percentile number of running reduces,0,mapreduce,jb red run 95
+mapreduce.job.reduces_running.count,rate,,,,The number of times the number of running reduces were sampled,0,mapreduce,jb red run cnt
+mapreduce.job.new_reduce_attempts.max,gauge,,task,,The max number of new reduce attempts,0,mapreduce,jb new red att mx
+mapreduce.job.new_reduce_attempts.avg,gauge,,task,,The average number of new reduce attempts,0,mapreduce,jb new red att avg
+mapreduce.job.new_reduce_attempts.median,gauge,,task,,The median number of new reduce attempts,0,mapreduce,jb new red att med
+mapreduce.job.new_reduce_attempts.95percentile,gauge,,task,,The 95th percentile number of new reduce attempts,0,mapreduce,jb new red att 95
+mapreduce.job.new_reduce_attempts.count,rate,,,,The number of times the number of new reduce attempts were sampled,0,mapreduce,jb new red att cnt
+mapreduce.job.running_reduce_attempts.max,gauge,,task,,The max number of running reduce attempts,0,mapreduce,jb run red att mx
+mapreduce.job.running_reduce_attempts.avg,gauge,,task,,The average number of running reduce attempts,0,mapreduce,jb run red att avg
+mapreduce.job.running_reduce_attempts.median,gauge,,task,,The median number of running reduce attempts,0,mapreduce,jb run red att med
+mapreduce.job.running_reduce_attempts.95percentile,gauge,,task,,The 95th percentile number of running reduce attempts,0,mapreduce,jb run red att 95
+mapreduce.job.running_reduce_attempts.count,rate,,,,The number of times the number of running reduce attempts were sampled,0,mapreduce,jb run red att cnt
+mapreduce.job.failed_reduce_attempts.max,gauge,,task,,The max number of failed reduce attempts,0,mapreduce,jb fld red att mx
+mapreduce.job.failed_reduce_attempts.avg,gauge,,task,,The average number of failed reduce attempts,0,mapreduce,jb fld red att avg
+mapreduce.job.failed_reduce_attempts.median,gauge,,task,,The median number of failed reduce attempts,0,mapreduce,jb fld red att med
+mapreduce.job.failed_reduce_attempts.95percentile,gauge,,task,,The 95th percentile number of failed reduce attempts,0,mapreduce,jb fld red att 95
+mapreduce.job.failed_reduce_attempts.count,rate,,,,The number of times the number of failed reduce attempts were sampled,0,mapreduce,jb fld red att cnt
+mapreduce.job.killed_reduce_attempts.max,gauge,,task,,The max number of killed reduce attempts,0,mapreduce,jb klld red att mx
+mapreduce.job.killed_reduce_attempts.avg,gauge,,task,,The average number of killed reduce attempts,0,mapreduce,jb klld red att avg
+mapreduce.job.killed_reduce_attempts.median,gauge,,task,,The median number of killed reduce attempts,0,mapreduce,jb klld red att med
+mapreduce.job.killed_reduce_attempts.95percentile,gauge,,task,,The 95th percentile number of killed reduce attempts,0,mapreduce,jb klld red att 95
+mapreduce.job.killed_reduce_attempts.count,rate,,,,The number of times the number of killed reduce attempts were sampled,0,mapreduce,jb klld red att cnt
+mapreduce.job.successful_reduce_attempts.max,gauge,,task,,The max number of successful reduce attempts,0,mapreduce,jb suc red att mx
+mapreduce.job.successful_reduce_attempts.avg,gauge,,task,,The average number of successful reduce attempts,0,mapreduce,jb suc red att avg
+mapreduce.job.successful_reduce_attempts.median,gauge,,task,,The median number of successful reduce attempts,0,mapreduce,jb suc red att med
+mapreduce.job.successful_reduce_attempts.95percentile,gauge,,task,,The 95th percentile number of successful reduce attempts,0,mapreduce,jb suc red att 95
+mapreduce.job.successful_reduce_attempts.count,rate,,,,The number of times the number of successful reduce attempts were sampled,0,mapreduce,jb suc red att cnt
+mapreduce.job.new_map_attempts.max,gauge,,task,,The max number of new map attempts,0,mapreduce,jb new mp att mx
+mapreduce.job.new_map_attempts.avg,gauge,,task,,The average number of new map attempts,0,mapreduce,jb new mp att avg
+mapreduce.job.new_map_attempts.median,gauge,,task,,The median number of new map attempts,0,mapreduce,jb new mp att med
+mapreduce.job.new_map_attempts.95percentile,gauge,,task,,The 95th percentile number of new map attempts,0,mapreduce,jb new mp att 95
+mapreduce.job.new_map_attempts.count,rate,,,,The number of times the number of new map attempts were sampled,0,mapreduce,jb new mp att cnt
+mapreduce.job.running_map_attempts.max,gauge,,task,,The max number of running map attempts,0,mapreduce,jb run mp att mx
+mapreduce.job.running_map_attempts.avg,gauge,,task,,The average number of running map attempts,0,mapreduce,jb run mp att avg
+mapreduce.job.running_map_attempts.median,gauge,,task,,The median number of running map attempts,0,mapreduce,jb run mp att med
+mapreduce.job.running_map_attempts.95percentile,gauge,,task,,The 95th percentile number of running map attempts,0,mapreduce,jb run mp att 95
+mapreduce.job.running_map_attempts.count,rate,,,,The number of times the number of running map attempts were sampled,0,mapreduce,jb run mp att cnt
+mapreduce.job.failed_map_attempts.max,gauge,,task,,The max number of failed map attempts,0,mapreduce,jb fld mp att mx
+mapreduce.job.failed_map_attempts.avg,gauge,,task,,The averge number of failed map attempts,0,mapreduce,jb fld mp att avg
+mapreduce.job.failed_map_attempts.median,gauge,,task,,The median number of failed map attempts,0,mapreduce,jb fld mp att med
+mapreduce.job.failed_map_attempts.95percentile,gauge,,task,,The 95th percentile number of failed map attempts,0,mapreduce,jb fld mp att 95
+mapreduce.job.failed_map_attempts.count,rate,,,,The number of times the number of failed map attempts were sampled,0,mapreduce,jb fld mp att cnt
+mapreduce.job.killed_map_attempts.max,gauge,,task,,The max number of killed map attempts,0,mapreduce,jb klld mp att mx
+mapreduce.job.killed_map_attempts.avg,gauge,,task,,The average number of killed map attempts,0,mapreduce,jb klld mp att avg
+mapreduce.job.killed_map_attempts.median,gauge,,task,,The median number of killed map attempts,0,mapreduce,jb klld mp att med
+mapreduce.job.killed_map_attempts.95percentile,gauge,,task,,The 95th percentile number of killed map attempts,0,mapreduce,jb klld mp att 95
+mapreduce.job.killed_map_attempts.count,rate,,,,The number of times the number of killed map attempts were sampled,0,mapreduce,jb klld mp att cnt
+mapreduce.job.successful_map_attempts.max,gauge,,task,,The max number of successful map attempts,0,mapreduce,jb suc mp att mx
+mapreduce.job.successful_map_attempts.avg,gauge,,task,,The average number of successful map attempts,0,mapreduce,jb suc mp att avg
+mapreduce.job.successful_map_attempts.median,gauge,,task,,The median number of successful map attempts,0,mapreduce,jb suc mp att med
+mapreduce.job.successful_map_attempts.95percentile,gauge,,task,,The 9th percentile number of successful map attempts,0,mapreduce,jb suc mp att 95
+mapreduce.job.successful_map_attempts.count,rate,,,,The number of times the number of successful map attempts were sampled,0,mapreduce,jb suc mp att cnt
+mapreduce.job.counter.reduce_counter_value.max,gauge,,,,The max counter value of reduce tasks,0,mapreduce,jb red cntr mx
+mapreduce.job.counter.reduce_counter_value.avg,gauge,,,,The average counter value of reduce tasks,0,mapreduce,jb red cntr avg
+mapreduce.job.counter.reduce_counter_value.median,gauge,,,,The median counter value of reduce tasks,0,mapreduce,jb red cntr med
+mapreduce.job.counter.reduce_counter_value.95percentile,gauge,,,,The 95th percentile counter value of reduce tasks,0,mapreduce,jb red cntr 95
+mapreduce.job.counter.reduce_counter_value.count,rate,,,,The number of times the counter value of reduce tasks were sampled,0,mapreduce,jb red cntr cnt
+mapreduce.job.counter.map_counter_value.max,gauge,,,,The max counter value of map tasks,0,mapreduce,jb mp cntr mx
+mapreduce.job.counter.map_counter_value.avg,gauge,,,,The average counter value of map tasks,0,mapreduce,jb mp cntr avg
+mapreduce.job.counter.map_counter_value.median,gauge,,,,The median counter value of map tasks,0,mapreduce,jb mp cntr med
+mapreduce.job.counter.map_counter_value.95percentile,gauge,,,,The 95th percentile counter value of map tasks,0,mapreduce,jb mp cntr 95
+mapreduce.job.counter.map_counter_value.count,rate,,,,The number of times the counter value of map tasks were sampled,0,mapreduce,jb mp cntr cnt
+mapreduce.job.counter.total_counter_value.max,gauge,,,,The max counter value of all tasks,0,mapreduce,jb tot cntr mx
+mapreduce.job.counter.total_counter_value.avg,gauge,,,,The average counter value of all tasks,0,mapreduce,jb tot cntr avg
+mapreduce.job.counter.total_counter_value.median,gauge,,,,The median counter value of all tasks,0,mapreduce,jb tot cntr med
+mapreduce.job.counter.total_counter_value.95percentile,gauge,,,,The 95th percentile counter value of all tasks,0,mapreduce,jb tot cntr 95
+mapreduce.job.counter.total_counter_value.count,rate,,,,The number of times the counter value of all tasks were sampled,0,mapreduce,jb tot cntr cnt
+mapreduce.job.map.task.progress.max,gauge,,percent,,The max of all map task progresses,0,mapreduce,mp tsk prog mx
+mapreduce.job.map.task.progress.avg,gauge,,percent,,The average of all map task progresses,0,mapreduce,mp tsk prog avg
+mapreduce.job.map.task.progress.median,gauge,,percent,,The median of all map task progresses,0,mapreduce,mp tsk prog med
+mapreduce.job.map.task.progress.95percentile,gauge,,percent,,The 95th percentile of all map task progresses,0,mapreduce,mp tsk prog 95
+mapreduce.job.map.task.progress.count,rate,,,,The number of times the map task progresses were sampled,0,mapreduce,mp tsk prog cnt
+mapreduce.job.map.task.elapsed_time.max,gauge,,milisecond,,The max of all map tasks elapsed time,0,mapreduce,mp tsk tm mx
+mapreduce.job.map.task.elapsed_time.avg,gauge,,milisecond,,The average of all map tasks elapsed time,0,mapreduce,mp tsk tm avg
+mapreduce.job.map.task.elapsed_time.median,gauge,,milisecond,,The median of all map tasks elapsed time,0,mapreduce,mp tsk tm med
+mapreduce.job.map.task.elapsed_time.95percentile,gauge,,milisecond,,The 95th percentile of all map tasks elapsed time,0,mapreduce,mp tsk tm 95
+mapreduce.job.map.task.elapsed_time.count,rate,,,,The number of times the map tasks elapsed time were sampled,0,mapreduce,mp tsk tm cnt
+mapreduce.job.reduce.task.progress.max,gauge,,percent,,The max of all reduce task progresses,0,mapreduce,red tsk prog mx
+mapreduce.job.reduce.task.progress.avg,gauge,,percent,,The average of all reduce task progresses,0,mapreduce,red tsk prog avg
+mapreduce.job.reduce.task.progress.median,gauge,,percent,,The median of all reduce task progresses,0,mapreduce,red tsk prog med
+mapreduce.job.reduce.task.progress.95percentile,gauge,,percent,,The 95th percentile of all reduce task progresses,0,mapreduce,red tsk prog 95
+mapreduce.job.reduce.task.progress.count,rate,,,,The number of times the reduce task progresses were sampled,0,mapreduce,red tsk prog cnt
+mapreduce.job.reduce.task.elapsed_time.max,gauge,,milisecond,,The max of all reduce tasks elapsed time,0,mapreduce,red tsk tm mx
+mapreduce.job.reduce.task.elapsed_time.avg,gauge,,milisecond,,The average of all reduce tasks elapsed time,0,mapreduce,red tsk tm avg
+mapreduce.job.reduce.task.elapsed_time.median,gauge,,milisecond,,The median of all reduce tasks elapsed time,0,mapreduce,red tsk tm med
+mapreduce.job.reduce.task.elapsed_time.95percentile,gauge,,milisecond,,The 95th percentile of all reduce tasks elapsed time,0,mapreduce,red tsk tm 95
+mapreduce.job.reduce.task.elapsed_time.count,rate,,,,The number of times the reduce tasks elapsed time were sampled,0,mapreduce,red tsk tm cnt

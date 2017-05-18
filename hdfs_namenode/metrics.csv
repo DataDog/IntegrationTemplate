@@ -1,0 +1,24 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+hdfs_namenode.capacity_total,gauge,,byte,,Total disk capacity in bytes,0,hdfs_namenode,cap tot
+hdfs_namenode.capacity_used,gauge,,byte,,Disk usage in bytes,0,hdfs_namenode,cap usd
+hdfs_namenode.capacity_remaining,gauge,,byte,,Remaining disk space left in bytes,0,hdfs_namenode,cap rem
+hdfs_namenode.total_load,gauge,,,,Total load on the file system,0,hdfs_namenode,tot ld
+hdfs_namenode.fs_lock_queue_length,gauge,,,,Lock queue length,0,hdfs_namenode,lck queue
+hdfs_namenode.blocks_total,gauge,,block,,Total number of blocks,0,hdfs_namenode,blk tot
+hdfs_namenode.max_objects,gauge,,object,,Maximum number of files HDFS supports,0,hdfs_namenode,max objs
+hdfs_namenode.files_total,gauge,,file,,Total number of files,0,hdfs_namenode,files tot
+hdfs_namenode.pending_replication_blocks,gauge,,block,,Number of blocks pending replication,0,hdfs_namenode,pnd rep blks
+hdfs_namenode.under_replicated_blocks,gauge,,block,,Number of under replicated blocks,0,hdfs_namenode,undr rep blks
+hdfs_namenode.scheduled_replication_blocks,gauge,,block,,Number of blocks scheduled for replication,0,hdfs_namenode,sched rep blks
+hdfs_namenode.pending_deletion_blocks,gauge,,block,,Number of pending deletion blocks,0,hdfs_namenode,pnd del blks
+hdfs_namenode.num_live_data_nodes,gauge,,node,,Total number of live data nodes,0,hdfs_namenode,lv d nds
+hdfs_namenode.num_dead_data_nodes,gauge,,node,,Total number of dead data nodes,0,hdfs_namenode,dead d nds
+hdfs_namenode.num_decom_live_data_nodes,gauge,,node,,Number of decommissioning live data nodes,0,hdfs_namenode,decom lv d nodes
+hdfs_namenode.num_decom_dead_data_nodes,gauge,,node,,Number of decommissioning dead data nodes,0,hdfs_namenode,decom dead d nds
+hdfs_namenode.volume_failures_total,gauge,,,,Total volume failures,0,hdfs_namenode,vol fail tot
+hdfs_namenode.estimated_capacity_lost_total,gauge,,byte,,Estimated capacity lost in bytes,0,hdfs_namenode,est cap lst tot
+hdfs_namenode.num_decommissioning_data_nodes,gauge,,node,,Number of decommissioning data nodes,0,hdfs_namenode,decom d nds
+hdfs_namenode.num_stale_data_nodes,gauge,,node,,Number of stale data nodes,0,hdfs_namenode,stl d nds
+hdfs_namenode.num_stale_storages,gauge,,,,Number of stale storages,0,hdfs_namenode,stl strgs
+hdfs_namenode.missing_blocks,gauge,,block,,Number of missing blocks,0,hdfs_namenode,blk msng
+hdfs_namenode.corrupt_blocks ,gauge,,block,,Number of corrupt blocks,0,hdfs_namenode,blk crpt
