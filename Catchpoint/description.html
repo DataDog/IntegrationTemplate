@@ -1,0 +1,83 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Catchpoint</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Catchpoint</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Catchpoint is a Digital Performance Analytics platform that gives you the power to deliver amazing user experiences.</div>
+      </div>
+    </div>
+
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Connect to Catchpoint to:</p>
+      <ul>
+        <li>Configure comprehensive alerts in your event stream</li>
+        <li>Direct links to Analysis Charts in the Catchpoint Portal</li>
+        <li>Alert Type tags for easy filtering</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+    </div>
+
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        To get Catchpoint alerts into your stream, login into the Catchpoint Portal and goto <b>Settings > API</b>.
+      </p>
+      <p>
+        <ol>
+          <li>In the <b>Alerts API</b> select <em>Enable</em></li>
+          <li>Enter the DataDog <b>Endpoint URL</b>. You will also need the DataDog <b>API Key</b> which can be created in the DataDog portal.
+            <pre class="textfile">
+              <code>
+https://app.datadoghq.com/api/v1/events?api_key=<b>API key</b>
+              </code>
+            </pre>
+          </li>
+          <li>Set <b>Status</b> to <em>Active</em></li>
+          <li>Select <em>Template</em> for <b>Format</b></li>
+          <li>Add a new template</li>
+          <li>Enter the template <b>Name</b> e.g. <em>DataDog</em> and set the <b>Format</b> to <em>JSON</em>.</li>
+          <li>Use the following JSON <b>Template</b> and <b>Save</b> it.
+            <pre class="textfile">
+              <code>
+{
+"title": "${TestName} [${TestId}] - ${switch(${notificationLevelId},'0','WARNING','1','CRITICAL','3','OK')}",
+"text": "${TestName} - http://portal.catchpoint.com/ui/Content/Charts/Performance.aspx?tList=
+${testId}&uts=${alertProcessingTimestampUtc}&z=&chartView=1",
+"priority": "normal",
+"tags": ["alertType:${Switch(${AlertTypeId},'0', 'Unknown','2', 'Byte Length','3', 
+'Content Match','4', 'Host Failure','7', 'Timing','9', 'Test Failure', '10', 
+'Insight', '11','Javascript Failure', '12', 'Ping',13, 'Requests')}"],
+"alert_type": "${switch(${notificationLevelId},'0','warning','1','error','3','success')}",
+"source_type_name": "catchpoint"
+}
+            </code>
+          </pre>
+          </li>
+        </ol>
+        Catchpoint will now send any alerts directly to the Events stream in DataDog.
+        </p>
+        <p>
+          <img class="screenshot" src="Images/configuration.png" />
+        </p>
+   </div>
+</body>
+</html>
