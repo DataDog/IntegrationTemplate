@@ -1,0 +1,64 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Bugsnag</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Find and fix harmful errors in your applications</div>
+      </div>
+    </div>
+
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Bugsnag automatically captures and alerts you of errors in your server, client, and mobile applications as they happen. Integrating Datadog with Bugsnag will send error notifications to your Datadog event stream.</p>
+      <p>With this integration:</p>
+      <ul>
+        <li>Get a summary of the error in your Datadog event stream</li>
+        <li>Get notified when a project has a spike in error rates</li>
+        <li>Filter notifications by severity and release stage</li>
+      </ul>
+    </div>
+
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To integrate Bugsnag with Datadog:</em>
+      </p>
+      <ol>
+        <li>In <a href="https://bugsnag.com">Bugsnag</a> go to the <em>Settings</em> in the project you would like to configure to send notifications to Datadog.</li>
+        <li>Select <em>Team Notifications</em> and then <em>Datadog</em></li>
+        <li>Customize the notifications you'll see in Datadog by selecting error notification triggers.<br />
+          <img class="screenshot" src="${img_path('bugsnag_configure_1.png')}" />
+        </li>
+        <li>Apply custom filters to your notification triggers to see errors from specific release stages and severities.<br />
+          <img class="screenshot" src="${img_path('bugsnag_configure_2.png')}" />
+        </li>
+        <li>Enter your Datadog API key:<br />
+        <pre class="textfile">
+          <code>
+Your API Key
+          </code>
+        </pre>
+       </li>
+       <li>Select <em>Test Notification</em> to test the configuration. A test error from Bugsnag will appear in Datadog.</li>
+       <li><em>Save</em> your settings.</li>
+       <li>Add more streams from the same project to see error events based on a different set of notification criteria.</li>
+     </ol>
+   </div>
+</body>
+</html>
