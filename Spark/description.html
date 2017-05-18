@@ -1,0 +1,95 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Apache Spark</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Spark</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Apache Spark is an open source cluster computing framework.</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Get metrics from your app in real time to</p>
+      <ul>
+        <li>Visualize performance metrics</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>Install Datadog Agent on the Master Node where the ResourceManager is running</em>
+      </p>
+
+      <ol>
+        <li>Configure the agent to connect to the ResourceManager<br>
+        Edit ${confd_help('<code>conf.d/%s.yaml</code>' % agent_name)}
+        <pre class="textfile">
+          <code>
+init_config:
+
+instances:
+  #
+  # The Spark check retrieves metrics from YARN's ResourceManager. This
+  # check must be run from the Master Node and the ResourceManager URI must
+  # be specified below. The ResourceManager URI is composed of the 
+  # ResourceManager's hostname and port.
+  #
+  # The ResourceManager hostname can be found in the yarn-site.xml conf file
+  # under the property yarn.resourcemanager.address
+  #
+  # The ResourceManager port can be found in the yarn-site.xml conf file under
+  # the property yarn.resourcemanager.webapp.address
+  #
+  - resourcemanager_uri: http://localhost:8088
+
+  # An optional friendly name can be specified for the cluster.
+  #   cluster_name: MySparkCluster
+
+    # Additional tags can be specified for the metrics.
+    # tags:
+    #   - optional_tag1
+    #   - optional_tag2
+          </code>
+        </pre>
+        </li>
+
+        <li>Restart the Agent</li>
+        <li>Execute the info command and verify that the integration check passed. The output of the command should contain a section similar to the following:
+        <pre class="verification">
+          <code>
+  Checks
+  ======
+
+    [...]
+
+    spark
+    -----
+      - instance #0 [OK]
+      - Collected 0 metrics, 0 events & 2 service checks  
+          </code>
+        </pre>
+        </li>
+      </ol>
+   </div>
+</body>
+</html>

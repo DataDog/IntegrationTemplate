@@ -1,0 +1,207 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+spark.job.count,rate,,task,,The number of jobs in a Spark application,0,spark,jb cnt
+spark.job.num_tasks.max,gauge,,task,,The max number of tasks in the application,0,spark,jb nm tsk mx
+spark.job.num_tasks.avg,gauge,,task,,The average number of tasks in the application,0,spark,jb nm tsk avg
+spark.job.num_tasks.median,gauge,,task,,The median number of tasks in the application,0,spark,jb nm tsk med
+spark.job.num_tasks.95percentile,gauge,,task,,The 95th percentile number of tasks in the application,0,spark,jb nm tsk 95
+spark.job.num_tasks.count,rate,,task,,The number of times the number of tasks in the application was sampled,0,spark,jb nm tsk cnt
+spark.job.num_active_tasks.max,gauge,,task,,The max number of active tasks in the application,0,spark,jb nm act tsk mx
+spark.job.num_active_tasks.avg,gauge,,task,,The average number of active tasks the application,0,spark,jb nm act tsk avg
+spark.job.num_active_tasks.median,gauge,,task,,The median number of active tasks in the application,0,spark,jb nm act tsk med
+spark.job.num_active_tasks.95percentile,gauge,,task,,The 95th percentile number of active tasks in the application,0,spark,jb nm act tsk 95
+spark.job.num_active_tasks.count,rate,,task,,The number of times the number of active tasks in the application was sampled,0,spark,jb nm act tsk cnt
+spark.job.num_skipped_tasks.max,gauge,,task,,The max number of skipped tasks in the application,0,spark,jb nm skp tsk mx
+spark.job.num_skipped_tasks.avg,gauge,,task,,The average number of skipped tasks in the application,0,spark,jb nm skp tsk avg
+spark.job.num_skipped_tasks.median,gauge,,task,,The median number of skipped tasks in the application,0,spark,jb nm skp tsk med
+spark.job.num_skipped_tasks.95percentile,gauge,,task,,The 95th percentile number of skipped tasks in the application,0,spark,jb nm skp tsk 95
+spark.job.num_skipped_tasks.count,rate,,task,,The number of times the number of skipped tasks in the application was sampled,0,spark,jb nm skp tsk cnt
+spark.job.num_failed_tasks.max,gauge,,task,,The max number of failed tasks in the application,0,spark,jb nm fld tsk mx
+spark.job.num_failed_tasks.avg,gauge,,task,,The average number of failed tasks in the application,0,spark,jb nm fld tsk avg
+spark.job.num_failed_tasks.median,gauge,,task,,The median number of failed tasks in the application,0,spark,jb nm fld tsk med
+spark.job.num_failed_tasks.95percentile,gauge,,task,,The 95th percentile number of failed tasks in the application,0,spark,jb nm fld tsk 95
+spark.job.num_failed_tasks.count,rate,,task,,The number of times the number of failed tasks in the application was sampled,0,spark,jb nm fld tsk cnt
+spark.job.num_active_stages.max,gauge,,,,The max number of active stages in the application,0,spark,jb act stg mx
+spark.job.num_active_stages.avg,gauge,,,,The average number of active stages in the application,0,spark,jb act stg avg
+spark.job.num_active_stages.median,gauge,,,,The median number of active stages in the application,0,spark,jb act stg med
+spark.job.num_active_stages.95percentile,gauge,,,,The 95th percentile number of active stages in the application,0,spark,jb act stg 95
+spark.job.num_active_stages.count,rate,,,,The number of times the number of active stages in the application was sampled,0,spark,jb act stg cnt
+spark.job.num_completed_stages.max,gauge,,,,The max number of completed stages in the application,0,spark,jb nm cmp stg mx
+spark.job.num_completed_stages.avg,gauge,,,,The average number of completed stages in the application,0,spark,jb nm cmp stg avg
+spark.job.num_completed_stages.median,gauge,,,,The median number of completed stages in the application,0,spark,jb nm cmp stg med
+spark.job.num_completed_stages.95percentile,gauge,,,,The 95th percentile number of completed stages in the application,0,spark,jb nm cmp stg 95
+spark.job.num_completed_stages.count,rate,,,,The number of times the number of completed stages in the application was sampled,0,spark,jb nm cmp stg cnt
+spark.job.num_skipped_stages.max,gauge,,,,The max number of skipped stages in the application,0,spark,jb nm skp stg mx
+spark.job.num_skipped_stages.avg,gauge,,,,The average number of skipped stages in the application,0,spark,jb nm skp stg avg
+spark.job.num_skipped_stages.median,gauge,,,,The median number of skipped stages in the application,0,spark,jb nm skp stg med
+spark.job.num_skipped_stages.95percentile,gauge,,,,The 95th percentile number of skipped stages in the application,0,spark,jb nm skp stg 95
+spark.job.num_skipped_stages.count,rate,,,,The number of times the number of skipped stages in the application was sampled,0,spark,jb nm skp stg cnt
+spark.job.num_failed_stages.max,gauge,,,,The max number of failed stages in the application,0,spark,jb nm fld stg mx
+spark.job.num_failed_stages.avg,gauge,,,,The average number of failed stages in the application,0,spark,jb nm fld stg avg
+spark.job.num_failed_stages.median,gauge,,,,The median number of failed stages in the application,0,spark,jb nm fld stg med
+spark.job.num_failed_stages.95percentile,gauge,,,,The 95th percentile number of failed stages in the application,0,spark,jb nm fld stg 95
+spark.job.num_failed_stages.count,rate,,,,The number of times the number of failed stages in the application was sampled,0,spark,jb nm fld stg cnt
+spark.stage.count,rate,,,,The number of stages in the Spark application,0,spark,stg cnt
+spark.stage.num_active_tasks.max,gauge,,task,,The max number of active tasks in the application's stages,0,spark,stg nm act tsk mx
+spark.stage.num_active_tasks.avg,gauge,,task,,The average number of active tasks in the application's stages,0,spark,stg nm act tsk avg
+spark.stage.num_active_tasks.median,gauge,,task,,The median number of active tasks in the application's stages,0,spark,stg nm act tsk med
+spark.stage.num_active_tasks.95percentile,gauge,,task,,The 95th percentile number of active tasks in the application's stages,0,spark,stg nm act tsk 95
+spark.stage.num_active_tasks.count,rate,,task,,The number of times the number of active tasks in the application's stages was sampled,0,spark,stg nm act tsk cnt
+spark.stage.num_complete_tasks.max,gauge,,task,,The max number of complete tasks in the application's stages,0,spark,stg nm cmp tsk mx
+spark.stage.num_complete_tasks.avg,gauge,,task,,The average number of complete tasks in the application's stages,0,spark,stg nm cmp tsk avg
+spark.stage.num_complete_tasks.median,gauge,,task,,The median number of complete tasks in the application's stages,0,spark,stg nm cmp tsk med
+spark.stage.num_complete_tasks.95percentile,gauge,,task,,The 95th percentile number of complete tasks in the application's stages,0,spark,stg nm cmp tsk 95
+spark.stage.num_complete_tasks.count,rate,,task,,The number of times the number of complete tasks in the application's stages was sampled,0,spark,stg nm cmp tsk cnt
+spark.stage.num_failed_tasks.max,gauge,,task,,The max number of failed tasks in the application's stages,0,spark,stg nm fld tsk mx
+spark.stage.num_failed_tasks.avg,gauge,,task,,The average number of failed tasks in the application's stages,0,spark,stg nm fld tsk avg
+spark.stage.num_failed_tasks.median,gauge,,task,,The median number of failed tasks in the application's stages,0,spark,stg nm fld tsk med
+spark.stage.num_failed_tasks.95percentile,gauge,,task,,The 95th percentile number of failed tasks in the application's stages,0,spark,stg nm fld tsk 95
+spark.stage.num_failed_tasks.count,rate,,task,,The number of times the number of failed tasks in the application's stages was sampled,0,spark,stg nm fld tsk cnt
+spark.stage.executor_run_time.max,gauge,,millisecond,,The max executor run time in the application's stages,0,spark,stg exe rn tm mx
+spark.stage.executor_run_time.avg,gauge,,millisecond,,The average executor run time in the application's stages,0,spark,stg exe rn tm avg
+spark.stage.executor_run_time.median,gauge,,millisecond,,The median executor run time in the application's stages,0,spark,stg exe rn tm med
+spark.stage.executor_run_time.95percentile,gauge,,millisecond,,The 95th percentile executor run time in the application's stages,0,spark,stg exe rn tm 95
+spark.stage.executor_run_time.count,rate,,millisecond,,The number of times the executor run time in the application's stages was sampled,0,spark,stg exe rn tm cnt
+spark.stage.input_bytes.max,gauge,,byte,,The max input bytes in the application's stages,0,spark,stg in byt mx
+spark.stage.input_bytes.avg,gauge,,byte,,The average number of input bytes in the application's stages,0,spark,stg in byt avg
+spark.stage.input_bytes.median,gauge,,byte,,The median input bytes in the application's stages,0,spark,stg in byt med
+spark.stage.input_bytes.95percentile,gauge,,byte,,The 95th percentile input bytes in the application's stages,0,spark,stg in byt 95
+spark.stage.input_bytes.count,rate,,byte,,The number of times the input bytes in the application's stages was sampled,0,spark,stg in byt cnt
+spark.stage.input_records.max,gauge,,record,,The max input records in the application's stages,0,spark,stg in rec mx
+spark.stage.input_records.avg,gauge,,record,,The average number of input records in the application's stages,0,spark,stg in rec avg
+spark.stage.input_records.median,gauge,,record,,The median input records in the application's stages,0,spark,stg in rec amed
+spark.stage.input_records.95percentile,gauge,,record,,The 95th percentile input records in the application's stages,0,spark,stg in rec 95
+spark.stage.input_records.count,rate,,record,,The number of times the input records in the application's stages was sampled,0,spark,stg in rec cnt
+spark.stage.output_bytes.max,gauge,,byte,,The max output bytes in the application's stages,0,spark,stg out byt mx
+spark.stage.output_bytes.avg,gauge,,byte,,The average number of output bytes in the application's stages,0,spark,stg out byt avg
+spark.stage.output_bytes.median,gauge,,byte,,The median output bytes in the application's stages,0,spark,stg out byt med
+spark.stage.output_bytes.95percentile,gauge,,byte,,The 95th percentile output bytes in the application's stages,0,spark,stg out byt 95
+spark.stage.output_bytes.count,rate,,byte,,The number of times the output bytes in the application's stages was sampled,0,spark,stg out byt cnt
+spark.stage.output_records.max,gauge,,record,,The max output records in the application's stages,0,spark,stg out rec mx
+spark.stage.output_records.avg,gauge,,record,,The average number of output records in the application's stages,0,spark,stg out rec avg
+spark.stage.output_records.median,gauge,,record,,The median output records in the application's stages,0,spark,stg out rec med
+spark.stage.output_records.95percentile,gauge,,record,,The 95th percentile output records in the application's stages,0,spark,stg out rec 95
+spark.stage.output_records.count,rate,,record,,The number of times the output records in the application's stages was sampled,0,spark,stg out rec cnt
+spark.stage.shuffle_read_bytes.max,gauge,,byte,,The max number of bytes read during a shuffle in the application's stages,0,spark,stg shfl rd byt mx
+spark.stage.shuffle_read_bytes.avg,gauge,,byte,,The average number of bytes read during a shuffle in the application's stages,0,spark,stg shfl rd byt avg
+spark.stage.shuffle_read_bytes.median,gauge,,byte,,The median number of bytes read during a shuffle in the application's stages,0,spark,stg shfl rd byt med
+spark.stage.shuffle_read_bytes.95percentile,gauge,,byte,,The 95th percentile number of bytes read during a shuffle in the application's stages,0,spark,stg shfl rd byt 95
+spark.stage.shuffle_read_bytes.count,rate,,byte,,The number of times the number of bytes read during a shuffle in the application's stages was sampled,0,spark,stg shfl rd byt cnt
+spark.stage.shuffle_read_records.max,gauge,,record,,The max number of records read during a shuffle in the application's stages,0,spark,stg shfl rd rec mx
+spark.stage.shuffle_read_records.avg,gauge,,record,,The average number of records read during a shuffle in the application's stages,0,spark,stg shfl rd rec avg
+spark.stage.shuffle_read_records.median,gauge,,record,,The median number of records read during a shuffle in the application's stages,0,spark,stg shfl rd rec med
+spark.stage.shuffle_read_records.95percentile,gauge,,record,,The 95th percentile number of records read during a shuffle in the application's stages,0,spark,stg shfl rd rec 95
+spark.stage.shuffle_read_records.count,rate,,record,,The number of times the number of records read during a shuffle in the application's stages was sampled,0,spark,stg shfl rd rec cnt
+spark.stage.shuffle_write_bytes.max,gauge,,byte,,The max number of shuffled bytes in the application's stages,0,spark,stg shfl wrt byt mx
+spark.stage.shuffle_write_bytes.avg,gauge,,byte,,The average number of shuffled bytes in the application's stages,0,spark,stg shfl wrt byt avg
+spark.stage.shuffle_write_bytes.median,gauge,,byte,,The median number of shuffled bytes in the application's stages,0,spark,stg shfl wrt byt med
+spark.stage.shuffle_write_bytes.95percentile,gauge,,byte,,The 95th percentile number of shuffled bytes in the application's stages,0,spark,stg shfl wrt byt 95
+spark.stage.shuffle_write_bytes.count,rate,,byte,,The number of times the number of shuffled bytes in the application's stages was sampled,0,spark,stg shfl wrt byt cnt
+spark.stage.shuffle_write_records.max,gauge,,record,,The max number of shuffled records in the application's stages,0,spark,stg shfl wrt rec mx
+spark.stage.shuffle_write_records.avg,gauge,,record,,The average number of shuffled records in the application's stages,0,spark,stg shfl wrt rec avg
+spark.stage.shuffle_write_records.median,gauge,,record,,The median number of shuffled records in the application's stages,0,spark,stg shfl wrt rec med
+spark.stage.shuffle_write_records.95percentile,gauge,,record,,The 95th percentile number of shuffled records in the application's stages,0,spark,stg shfl wrt rec 95
+spark.stage.shuffle_write_records.count,rate,,record,,The number of times the number of shuffled records in the application's stages was sampled,0,spark,stg shfl wrt rec cnt
+spark.stage.memory_bytes_spilled.max,gauge,,byte,,The max number of bytes spilled to disk in the application's stages,0,spark,stg mem byt spld mx
+spark.stage.memory_bytes_spilled.avg,gauge,,byte,,The average number of bytes spilled to disk in the application's stages,0,spark,stg mem byt spld avg
+spark.stage.memory_bytes_spilled.median,gauge,,byte,,The median number of bytes spilled to disk in the application's stages,0,spark,stg mem byt spld med
+spark.stage.memory_bytes_spilled.95percentile,gauge,,byte,,The 95th percentile number of bytes spilled to disk in the application's stages,0,spark,stg mem byt spld 95
+spark.stage.memory_bytes_spilled.count,rate,,byte,,The number of times the number of bytes spilled to disk in the application's stages was sampled,0,spark,stg mem byt spld cnt
+spark.stage.disk_bytes_spilled.max,gauge,,byte,,"The max size, on disk, of the spilled bytes in the application's stages",0,spark,stg dsk byt spld mx
+spark.stage.disk_bytes_spilled.avg,gauge,,byte,,"The average size, on disk, of the spilled bytes in the application's stages",0,spark,stg dsk byt spld avg
+spark.stage.disk_bytes_spilled.median,gauge,,byte,,"The median size, on disk, of the spilled bytes in the application's stages",0,spark,stg dsk byt spld med
+spark.stage.disk_bytes_spilled.95percentile,gauge,,byte,,"The 95th percentile size, on disk, of the spilled bytes in the application's stages",0,spark,stg dsk byt spld 95
+spark.stage.disk_bytes_spilled.count,rate,,byte,,"The number of times the size, on disk, of the spilled bytes in the application's stages was sampled",0,spark,stg dsk byt spld cnt
+spark.driver.rdd_blocks,rate,,block,,The number of RDD blocks in the driver,0,spark,dvr rdd blk
+spark.driver.memory_used,rate,,byte,,The amount of memory used in the driver,0,spark,dvr mem usd
+spark.driver.disk_used,rate,,byte,,The amount of disk used in the driver,0,spark,dvr dsk usd
+spark.driver.active_tasks,rate,,task,,The number of active tasks in the driver,0,spark,dvr act tsk
+spark.driver.failed_tasks,rate,,task,,The number of failed tasks in the driver,0,spark,dvr fld tsk
+spark.driver.completed_tasks,rate,,task,,The number of completed tasks in the driver,0,spark,dvr comp tsk
+spark.driver.total_tasks,rate,,task,,The number of total tasks in the driver,0,spark,dvr tot task
+spark.driver.total_duration,rate,,millisecond,,The driver's total duration,0,spark,dvr tot dur
+spark.driver.total_input_bytes,rate,,byte,,The number of input bytes in the driver,0,spark,dvr tot in byt
+spark.driver.total_shuffle_read,rate,,byte,,The total number of bytes read during a shuffle in the driver,0,spark,dvr tot shfl rd
+spark.driver.total_shuffle_write,rate,,byte,,The total number of shuffled bytes in the driver,0,spark,dvr tot shfl wrt
+spark.driver.max_memory,rate,,byte,,The maximum memory used in the driver,0,spark,dvr max mem
+spark.executor.count,rate,,,,The number of executors in the Spark application,0,spark,exe cnt
+spark.executor.rdd_blocks.max,gauge,,block,,The max number of persisted RDD blocks in the application's executors,0,spark,exe rdd blk mx
+spark.executor.rdd_blocks.avg,gauge,,block,,The average number of persisted RDD blocks in the application's executors,0,spark,exe rdd blk avg
+spark.executor.rdd_blocks.median,gauge,,block,,The median number of persisted RDD blocks in the application's executors,0,spark,exe rdd blk med
+spark.executor.rdd_blocks.95percentile,gauge,,block,,The 95th percentile number of persisted RDD blocks in the application's executors,0,spark,exe rdd blk 95
+spark.executor.rdd_blocks.count,rate,,block,,The number of times the number of persisted RDD blocks in the application's executors was sampled,0,spark,exe rdd blk cnt
+spark.executor.memory_used.max,gauge,,byte,,The max amount of memory used for cached RDDs in the application's executors,0,spark,exe mem usd mx
+spark.executor.memory_used.avg,gauge,,byte,,The average amount of memory used for cached RDDs in the application's executors,0,spark,exe mem usd avg
+spark.executor.memory_used.median,gauge,,byte,,The median amount of memory used for cached RDDs in the application's executors,0,spark,exe mem usd med
+spark.executor.memory_used.95percentile,gauge,,byte,,The 95th percentile amount of memory used for cached RDDs in the application's executors,0,spark,exe mem usd 95
+spark.executor.memory_used.count,rate,,byte,,The number of times the amount of memory used for cached RDDs in the application's executors was sampled,0,spark,exe mem usd cnt
+spark.executor.disk_used.max,gauge,,byte,,The max amount of disk space used by persisted RDDs in the application's executors,0,spark,exe dsk usd mx
+spark.executor.disk_used.avg,gauge,,byte,,The average amount of disk space used by persisted RDDs in the application's executors,0,spark,exe dsk usd avg
+spark.executor.disk_used.median,gauge,,byte,,The median amount of disk space used by persisted RDDs in the application's executors,0,spark,exe dsk usd med
+spark.executor.disk_used.95percentile,gauge,,byte,,The 95th percentile amount of disk space used by persisted RDDs in the application's executors,0,spark,exe dsk usd 95
+spark.executor.disk_used.count,rate,,byte,,The number of times the amount of disk space used by persisted RDDs in the application's executors was sampled,0,spark,exe dsk usd cnt
+spark.executor.active_tasks.max,gauge,,task,,The max number of active tasks in the application's executors,0,spark,exe act tsk mx
+spark.executor.active_tasks.avg,gauge,,task,,The average number of active tasks in the application's executors,0,spark,exe act tsk avg
+spark.executor.active_tasks.median,gauge,,task,,The median number of active tasks in the application's executors,0,spark,exe act tsk med
+spark.executor.active_tasks.95percentile,gauge,,task,,The 95th percentile number of active tasks in the application's executors,0,spark,exe act tsk 95
+spark.executor.active_tasks.count,rate,,task,,The number of times the number of active tasks in the application's executors was sampled,0,spark,exe act tsk cnt
+spark.executor.failed_tasks.max,gauge,,task,,The max number of failed tasks in the application's executors,0,spark,exe fld tsk mx
+spark.executor.failed_tasks.avg,gauge,,task,,The average number of failed tasks in the application's executors,0,spark,exe fld tsk avg
+spark.executor.failed_tasks.median,gauge,,task,,The median number of failed tasks in the application's executors,0,spark,exe fld tsk med
+spark.executor.failed_tasks.95percentile,gauge,,task,,The 95th percentile number of failed tasks in the application's executors,0,spark,exe fld tsk 95
+spark.executor.failed_tasks.count,rate,,task,,The number of times the number of failed tasks in the application's executors was sampled,0,spark,exe fld tsk cnt
+spark.executor.completed_tasks.max,gauge,,task,,The max number of completed tasks in the application's executors,0,spark,exe comp tsk mx
+spark.executor.completed_tasks.avg,gauge,,task,,The average number of completed tasks in the application's executors,0,spark,exe comp tsk avg
+spark.executor.completed_tasks.median,gauge,,task,,The median number of completed tasks in the application's executors,0,spark,exe comp tsk med
+spark.executor.completed_tasks.95percentile,gauge,,task,,The 95th percentile number of completed tasks in the application's executors,0,spark,exe comp tsk 95
+spark.executor.completed_tasks.count,rate,,task,,The number of times the number of completed tasks in the application's executors was sampled,0,spark,exe comp tsk cnt
+spark.executor.total_tasks.max,gauge,,task,,The max total number of tasks in the application's executors,0,spark,exe tot tsk mx
+spark.executor.total_tasks.avg,gauge,,task,,The average total number of tasks in the application's executors,0,spark,exe tot tsk avg
+spark.executor.total_tasks.median,gauge,,task,,The median total number of tasks in the application's executors,0,spark,exe tot tsk med
+spark.executor.total_tasks.95percentile,gauge,,task,,The 95th percentile total number of tasks in the application's executors,0,spark,exe tot tsk 95
+spark.executor.total_tasks.count,rate,,task,,The number of times the total number of tasks in the application's executors was sampled,0,spark,exe tot tsk cnt
+spark.executor.total_duration.max,gauge,,millisecond,,The max total time the application's executors have spent executing tasks,0,spark,exe tot dur mx
+spark.executor.total_duration.avg,gauge,,millisecond,,The average total time the application's executors have spent executing tasks,0,spark,exe tot dur avg
+spark.executor.total_duration.median,gauge,,millisecond,,The median total time the application's executors have spent executing tasks,0,spark,exe tot dur med
+spark.executor.total_duration.95percentile,gauge,,millisecond,,The 95th percentile total time the application's executors have spent executing tasks,0,spark,exe tot dur 95
+spark.executor.total_duration.count,rate,,millisecond,,The number of times the total time the application's executors have spent executing tasks was sampled,0,spark,exe tot dur cnt
+spark.executor.total_input_bytes.max,gauge,,byte,,The max total number of input bytes in the application's executors,0,spark,exe in byt mx
+spark.executor.total_input_bytes.avg,gauge,,byte,,The average total number of input bytes in the application's executors,0,spark,exe in byt avg
+spark.executor.total_input_bytes.median,gauge,,byte,,The median total number of input bytes in the application's executors,0,spark,exe in byt med
+spark.executor.total_input_bytes.95percentile,gauge,,byte,,The 95th percentile total number of input bytes in the application's executors,0,spark,exe in byt 95
+spark.executor.total_input_bytes.count,rate,,byte,,The number of times the total number of input bytes in the application's executors was sampled,0,spark,exe in byt cnt
+spark.executor.total_shuffle_read.max,gauge,,byte,,The max total number of bytes read during a shuffle in the application's executors,0,spark,exe tot shfl rd mx
+spark.executor.total_shuffle_read.avg,gauge,,byte,,The average total number of bytes read during a shuffle in the application's executors,0,spark,exe tot shfl rd avg
+spark.executor.total_shuffle_read.median,gauge,,byte,,The median total number of bytes read during a shuffle in the application's executors,0,spark,exe tot shfl rd med
+spark.executor.total_shuffle_read.95percentile,gauge,,byte,,The 95th percentile total number of bytes read during a shuffle in the application's executors,0,spark,exe tot shfl rd 95
+spark.executor.total_shuffle_read.count,rate,,byte,,The number of times the total number of bytes read during a shuffle in the application's executors was sampled,0,spark,exe tot shfl rd cnt
+spark.executor.total_shuffle_write.max,gauge,,byte,,The max total number of shuffled bytes in the application's executors,0,spark,exe tot shfl wrt mx
+spark.executor.total_shuffle_write.avg,gauge,,byte,,The average total number of shuffled bytes in the application's executors,0,spark,exe tot shfl wrt avg
+spark.executor.total_shuffle_write.median,gauge,,byte,,The median total number of shuffled bytes in the application's executors,0,spark,exe tot shfl wrt med
+spark.executor.total_shuffle_write.95percentile,gauge,,byte,,The 95th percentile total number of shuffled bytes in the application's executors,0,spark,exe tot shfl wrt 95
+spark.executor.total_shuffle_write.count,rate,,byte,,The number of times the total number of shuffled bytes in the application's executors was sampled,0,spark,exe tot shfl wrt cnt
+spark.executor.max_memory.max,gauge,,byte,,The max maximum memory available for caching RDD blocks in the application's executors,0,spark,exe max mem mx
+spark.executor.max_memory.avg,gauge,,byte,,The average maximum memory available for caching RDD blocks in the application's executors,0,spark,exe max mem avg
+spark.executor.max_memory.median,gauge,,byte,,The median maximum memory available for caching RDD blocks in the application's executors,0,spark,exe max mem med
+spark.executor.max_memory.95percentile,gauge,,byte,,The 95th percentile maximum memory available for caching RDD blocks in the application's executors,0,spark,exe max mem 95
+spark.executor.max_memory.count,rate,,byte,,The number of times the maximum memory available for caching RDD blocks in the application's executors was sampled,0,spark,exe max mem cnt
+spark.rdd.count,rate,,,,The number of persisted RDDs in the Spark application,0,spark,rdd cnt
+spark.rdd.num_partitions.max,gauge,,,,The max number of persisted RDD partitions in the application,0,spark,rdd num part mx
+spark.rdd.num_partitions.avg,gauge,,,,The average number of persisted RDD partitions in the application,0,spark,rdd num part avg
+spark.rdd.num_partitions.median,gauge,,,,The median number of persisted RDD partitions in the application,0,spark,rdd num part med
+spark.rdd.num_partitions.95percentile,gauge,,,,The 95th percentile number of persisted RDD partitions in the application,0,spark,rdd num part 95
+spark.rdd.num_partitions.count,rate,,,,The number of times the number of persisted RDD partitions in the application was sampled,0,spark,rdd num part cnt
+spark.rdd.num_cached_partitions.max,gauge,,,,The max number of in-memory cached RDD partitions in the application,0,spark,rdd num ch part mx
+spark.rdd.num_cached_partitions.avg,gauge,,,,The average number of in-memory cached RDD partitions in the application,0,spark,rdd num ch part avg
+spark.rdd.num_cached_partitions.median,gauge,,,,The median number of in-memory cached RDD partitions in the application,0,spark,rdd num ch part med
+spark.rdd.num_cached_partitions.95percentile,gauge,,,,The 95th percentile number of in-memory cached RDD partitions in the application,0,spark,rdd num ch part 95
+spark.rdd.num_cached_partitions.count,rate,,,,The number of times the number of in-memory cached RDD partitions in the application was sampled,0,spark,rdd num ch part cnt
+spark.rdd.memory_used.max,gauge,,byte,,The max amount of memory used in the application's persisted RDDs,0,spark,rdd mem usd mx
+spark.rdd.memory_used.avg,gauge,,byte,,The average amount of memory used in the application's persisted RDDs,0,spark,rdd mem usd avg
+spark.rdd.memory_used.median,gauge,,byte,,The median amount of memory used in the application's persisted RDDs,0,spark,rdd mem usd med
+spark.rdd.memory_used.95percentile,gauge,,byte,,The 95th percentile amount of memory used in the application's persisted RDDs,0,spark,rdd mem usd 95
+spark.rdd.memory_used.count,rate,,byte,,The number of times the amount of memory used in the application's persisted RDDs was sampled,0,spark,rdd mem usd cnt
+spark.rdd.disk_used.max,gauge,,byte,,The max amount of disk space used by persisted RDDs in the application,0,spark,rdd dsk usd mx
+spark.rdd.disk_used.avg,gauge,,byte,,The average amount of disk space used by persisted RDDs in the application,0,spark,rdd dsk usd avg
+spark.rdd.disk_used.median,gauge,,byte,,The median amount of disk space used by persisted RDDs in the application,0,spark,rdd dsk usd med
+spark.rdd.disk_used.95percentile,gauge,,byte,,The 95th percentile amount of disk space used by persisted RDDs in the application,0,spark,rdd dsk usd 95
+spark.rdd.disk_used.count,gauge,,byte,,The number of times the amount of disk space used by persisted RDDs in the application was sampled,0,spark,rdd dsk usd cnt
