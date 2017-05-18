@@ -1,0 +1,69 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">CloudHealth Technologies Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">CloudHealth Technologies Integration</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">CloudHealth visualizes, optimizes, and automates services and expenditures across multiple clouds</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>With Datadog and CloudHealth, you can:</p>
+      <ul>
+        <li>Reduce cost by right sizing and optimizing your AWS environment using granular data from Datadog</li>
+	<li>Automate policies and governance to reduce risk</li>
+	<li>Tackle Reserved Instances with confidence using CloudHealth’s analysis and automation</li>
+	<li>Visualize your assets across clouds aligned to line of business</li>
+      </ul>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+	Setup instructions for CloudHealth
+      </p>
+      <p>
+	  If you have not yet started optimizing your cloud with CloudHealth, first <a href="http://info.cloudhealthtech.com/freetrial/homepage/banner-internal">sign up for a risk-free 14 day trial.<a/> For existing CloudHealth customers, all you need to do is take these four simple steps to setup your Datadog integration in CloudHealth and to improve visibility across every dimension of their cloud environment.
+      <p>
+      <ol>	
+	<li>
+	  In the CloudHealth Platform, Go to Setup -&gt; Accounts -&gt; Datadog and click New Account button on the top right corner.
+	</li>
+	<img class="screenshot" src="${img_path("cht_snapshot_1.png")}"/>
+	<li>
+	  Fill out the form with information from the Datadog account that you want to integrate:
+	  <ol type="a">
+	    <li><b>Name</b> - friendly name, you can update this at any time.</li>
+	    <li><b>API Key</b> - API keys are unique to your organization.</li>
+	    <li><b>Application Key</b> - Application keys, in conjunction with your organization’s API key, give access to Datadog's API. CloudHealth only queries Datadog for host and metric information, and does not write anything to Datadog.</li>
+	    <li><b>Import Tags</b> - This will allow you to import Datadog tags into the platform</li>
+	  </ol>
+	</li>
+	<li>
+	   <b>Allowed tags</b> - if “Import tags” is toggled on, tags will be actively collected and you will see an additional field to whitelist the tags that you want to import into CloudHealth. Select the tags that should be allowed to imported within the CloudHealth platform.
+	</li>
+	<img class="screenshot" src="${img_path("cht_snapshot_2.png")}"/>
+	<li>
+	  When finished click <b>Save Account</b>
+	</li>
+     </ol>
+   </div>
+</body>
+</html>
