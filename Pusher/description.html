@@ -1,0 +1,55 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Pusher</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Pusher is a simple hosted API for quickly, easily and securely integrating realtime features in applications.</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Monitor your realtime messages and connection analytics across your Pusher apps:</p>
+      <ul>
+        <li>Visualise concurrent connections in realtime</li>
+        <li>Track messages sent by type, including broadcast, client events, webhooks, and API messages</li>
+        <li>Get a statistical breakdown of message size, including average, median, max, and 95th percentile</li>
+        <li>Monitor usage within billing timetables</li>
+      </ul>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>In order to monitor your metrics from Pusher:</p>
+      <ol>
+        <li>Copy Datadog API key:
+          <pre>
+            <code>Datadog API key goes here</code>
+          </pre>
+        </li>
+        <li>Go to your Pusher account settings and select ‘Datadog Integration’, or go <a href="https://dashboard.pusher.com/accounts/integrations/stats">here</a></li>
+        <li>Paste your Datadog API key and click ‘Save’</li>
+        <li>Return to your Datadog dashboard to see metrics begin to populate the default Pusher dashboard view
+        <br>
+        NOTE: metrics are populated in realtime, therefore your historical data will begin to populate once your integration is successfully completed
+        </li>
+     </ol>
+   </div>
+</body>
+</html>
