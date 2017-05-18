@@ -1,0 +1,50 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Opsmatic</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Opsmatic provides real-time visibility of any change in the live state of computing infrastructure and intelligently alerts users before trouble begins.</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Connect Opsmatic to Datadog to get:</p>
+      <ul>
+        <li>Instant awareness of any critical change</li>
+        <li>Full visibility of the live state and history of all your hosts</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To see Opsmatic events in your DataDog stream:</em>
+      </p>
+      <ul>
+          <li>Add your <a href="https://app.datadoghq.com/account/settings#api">DataDog API key</a> to your Opsmatic Integrations page.</li>
+          <li>Configure your Opsmatic notifications to go to DataDog.</li>
+        <li><a href="http://blog.opsmatic.com/post/125452635732">Check out our DataDog Integration blog post for more information.<a/></li>
+     </ul>
+   </div>
+</body>
+</html>
