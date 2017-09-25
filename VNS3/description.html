@@ -1,0 +1,57 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">VNS3</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Cloud network appliance for application connectivity and security.</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Get state information regarding your VNS3 topology's IPSec endpoints/tunnels, VNS3 Peers, and overlay clients.</p>
+      <ul>
+        <li> Peering links Status Check:
+          <p>
+            <br>
+            <img class="screenshot" src="Images/peering.png" />
+          </p>
+        <li> Overlay Clients Status Check:
+          <p>
+            <br>
+            <img class="screenshot" src="Images/clients.png" />
+          </p>
+        <li> IPSec tunnels Status Check:
+          <p>
+            <br>
+            <img class="screenshot" src="Images/ipsec.png" />
+          </p>
+      </ul>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To capture metrics, you need to deploy Cohesive Networks' DataDog container, set up the VNS3 firewall, and configure the container.</em><br><br>
+        Read the guide <a href="https://cohesive.net/dnld/Cohesive-Networks_VNS3-DataDog-Container-Guide.pdf">here<a/>.<br><br>
+        Watch the video <a href="https://youtu.be/sTCgCG3m4vk">here<a/>.<br>
+      </p>
+   </div>
+</body>
+</html>
