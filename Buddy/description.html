@@ -1,0 +1,63 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Buddy Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Buddy Integration</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Buddy</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">One-click delivery automation for web developers.</div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Enabling this integration will let you:</p>
+      <ul>
+        <li>send events about deployments to Datadog</li>
+        <li>correlate deployment details with your Datadog metrics</li>
+        <li>detect the sources of performance spikes</li>
+      </ul>
+      <img class="screenshot" src="Images/datadog-integration.png" />
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <ol>
+        <li>In your Datadog account settings go to <a href="https://app.datadoghq.com/account/settings#api">Integrations -> APIs</a> and copy
+        the <strong>API Key</strong> token</li>
+        <li><a href="https://app.buddy.works/login">Sign in to your Buddy account</a> and go to the pipeline with the deployment action that
+        you want to track</li>
+        <li>Click the plus at the end of the pipeline and select <strong>Datadog</strong> in the <strong>Notifications</strong> section</li>
+        <li>Enter the name of your Datadog account and paste the API key that you copied</li>
+        <li>You can use <a href="https://buddy.works/knowledge/deployments/what-parameters-buddy-use">Buddy parameters</a> to define the
+        title of the event and content sent, for example:
+          <pre class="textfile">
+            <code># Event title 
+${execution.pipeline.name} execution #${execution.id}
+
+# Content
+${execution.to_revision.revision} - ${execution.to_revision.message}</code>
+           </pre>
+        </li>
+        <li>When ready, click <strong>Add action</strong> and run the pipeline. On every successful deployment, Buddy will send an event to Datadog:</li>
+     </ol>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+   </div>
+</body>
+</html>
