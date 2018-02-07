@@ -1,6 +1,6 @@
 # Datadog Integration Template
 
-Adding a tile on to Datadog is easy! Just follow the steps below to use the template from this repo and submit a pull request to get someone from the integrations team to review.
+Adding an integration tile on to Datadog is easy! Just follow the steps below to use the template from this repo and submit a pull request to get someone from the integrations team to review.
 
 ## Steps
 
@@ -33,7 +33,7 @@ Adding a tile on to Datadog is easy! Just follow the steps below to use the temp
 
   This JSON file provides metadata about your integration and should include:
 
-  - **name**: The name of your integration
+  - **name**: The name of your integration (lowercase)
   - **manifest_version**: The version of this manifest file
   - **maintainer**: Provide a valid email address where you can be contacted regarding this integration
   - **display_name**: The name of your integration
@@ -41,12 +41,12 @@ Adding a tile on to Datadog is easy! Just follow the steps below to use the temp
   - **metric_prefix**: The root namespace for your metrics, usually the same as the `name` key
   - **metric_to_check**: The metric to check if the integration is working or not
   - **creates_events**: Boolean true/false, depending on whether your integration sends events or not
-  - **public_title**: "Datadog-AwesomeApp Integration"
+  - **public_title**: Datadog-YourAppName Integration
   - **type:** Either `crawler` or `agent`, if your integration is an agent check
   - **doc_link**: Link to the documentation page for your integration once it eventually gets published
   - **is_public**: **true** (don't change this value)
   - **has_logo**: **true** (don't change this value)
-  - **categories**: Categories to sort your integration, [current categories can be found on integrations dedicated documentation page](/integrations)
+  - **categories**: Categories to sort your integration, [current categories can be found on integrations dedicated documentation page](https://docs.datadoghq.com/integrations/)
 
 6. Edit `YourAppName/metadata.csv` to provide metrics you are collecting. Refer to the [this section](https://docs.datadoghq.com/developers/integrations/integration_sdk/#metadata-csv) for further details
 
