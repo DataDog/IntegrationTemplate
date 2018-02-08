@@ -19,12 +19,9 @@ There are three ways to setup the Docker integration: install the agent on the h
 
 **Required**
 
-The installation section should cover anything that needs to be installed on the agent host. For instance, in the Docker installation section you learn about installing the agent into a container. If there is nothing to install on the agent host, this section can be left out. To be a complete integration, either an installation section or a configuration section must be included.
+This section should cover anything that you can configure in the Datadog interface or the agent configuration files. Anything that is required to setup the integration should be documented (along with screenshots).
 
-### Configuration
-**Required with some exceptions**
-
-The configuration section should cover anything that you can configure in the Datadog interface or the agent configuration files. In almost every case this section should be included since there is almost always something to configure. To be a complete integration, either an installation section or a configuration section must be included.
+**Note:** Please avoid linking to an external docs page or PDF file. Instead, copy the documentation here so it becomes easier for your users.
 
 ## Data Collected
 ### Metrics
