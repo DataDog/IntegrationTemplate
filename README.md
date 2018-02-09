@@ -1,42 +1,55 @@
 # Datadog Integration Template
 
+Adding an integration tile on to Datadog is easy! Just follow the steps below to use the template from this repo and submit a pull request to get someone from the integrations team to review.
+
 ## Steps
-To add a new tile to Datadog integration page, please follow the steps below
 
 1. Fork this repo
-2. Copy Integration directory to YourAppName (cp -r Integration YourAppName)
-3. Create your logo files on a white background canvas in 3 different sizes, 200x128px, 128x128px and 120x60px. Add images to your Images directory.
-4. (Optional) If you want user to see a default dashboard, please signup for datadog and create a screenboard
 
-  > Goto https://app.datadoghq.com/dash/list and click on "Create dashboard" and select "ScreenBoard". Once you are done editing, please save and add the link to mainfest.json file.
+2. Copy the `Integration` directory to `YourAppName`
 
-  > The link will look like this: https://app.datadoghq.com/screen/0000/boardname
+  `cp -r Integration YourAppName`
 
-5. Edit YourAppName/description.html to provide your application's information
-6. Edit YourAppName/metrics.csv to provide metrics you are collecting. See [metrics](#Metrics) for more detail and example
-6. Commit, push and submit pull request
+3. Create your logo files on a white background canvas, exported to the PNG format, in 3 different sizes: 200x128px, 128x128px and 120x60px. Add the logo images to the  `YourAppName/logos/` directory
 
-If you want to reference images, please add images into "YourAppName/Images/" folder and use the following example to insert image.
+5. Edit `YourAppName/README.md` with your application's information
 
-```
-<img src="${img_path("yourapp-snapshot.png")}" />
-```
+  Your README file should provide the following sections:
 
-## Metrics
-There are columns in metrics.csv file, here is a description and acceptable value for each
-* **metric_name:** This is the name of metric. You should name this yourappname.metric_name.
-* **metric_type:** This can be any one of `{'gauge', 'counter', 'rate', 'count'}`. See more [here](http://docs.datadoghq.com/guides/metrics/#counters).
-* **interval:** Leave blank
-* **unit_name:** The unit for your metric. For example, if you put `connections` here, your metric will be shown like " 50 connections"
-* **per_unit_name:** The base unit for your metric. For example, if you put `second` here, your metric will be shown like "50 connections/second"
-* **description:** This is a text description of your metric
-* **orientation:** This can be -1, 0 or 1. For example, `system.cpu.user`: the lower it is, the better it is. Its orientation should be -1. On the contrary `system.cpu.idle`: the higher it is, the better it is. Its orientation should be 1. 0 means no values are better or worse.
-* **integration:** This is the name of your integraiton. In this case it should be `yourappname`, same to what you use in your metric namespace
-* **short_name:** A short name for your metric. For example, short name for `postgresql` is `pg`
+  - **Overview** (required): Let others know what they can expect to do with your integration.
+  - **Setup** (required): Provide information about how to install and configure your integration
+  - **Metrics**: Include a list of the metrics if your integration provides any
+  - **Events**: Include a list of events if your integration provides any
+  - **Service Checks**: Include a list of service checks if your integration provides any
 
+  If you want to reference images, please add images into `YourAppName/images/` folder and use the following example to insert image.
 
-## Important notices
-1. Do not try to add new css rules, the preview.css is only for preview purpose, all the rules within will be ignored
+  ```
+  ![snapshot](https://raw.githubusercontent.com/DataDog/integrations-extras/master/YourAppName/images/snapshot.png)
+  ```
+  **NOTE:** Relative URLs for the images will **not** work. Copy the full URL above and replace `YourAppName` with the correct value. Once your PR has been approved and merged to the master branch, the image will display correctly.
 
+6. Edit `YourAppName/manifest.json` with your app's details
 
-Send e-mail to ilan@datadoghq.com if you run into any problems.
+  This JSON file provides metadata about your integration and should include:
+
+  - **name**: The name of your integration (lowercase)
+  - **manifest_version**: The version of this manifest file
+  - **maintainer**: Provide a valid email address where you can be contacted regarding this integration
+  - **display_name**: The name of your integration
+  - **short_description**: Provide a short description of your integration  
+  - **metric_prefix**: The root namespace for your metrics, usually the same as the `name` key
+  - **metric_to_check**: The metric to check if the integration is working or not
+  - **creates_events**: Boolean true/false, depending on whether your integration sends events or not
+  - **public_title**: Datadog-YourAppName Integration
+  - **type:** Either `crawler` or `agent`, if your integration is an agent check
+  - **doc_link**: Link to the documentation page for your integration once it eventually gets published
+  - **is_public**: **true** (don't change this value)
+  - **has_logo**: **true** (don't change this value)
+  - **categories**: Categories to sort your integration, [current categories can be found on integrations dedicated documentation page](https://docs.datadoghq.com/integrations/)
+
+6. Edit `YourAppName/metadata.csv` to provide metrics you are collecting. Refer to the [this section](https://docs.datadoghq.com/developers/integrations/integration_sdk/#metadata-csv) for further details
+
+6. Commit your changes, push and submit a pull request
+
+Send an e-mail to dhruv.sahni@datadoghq.com if you have any questions.
