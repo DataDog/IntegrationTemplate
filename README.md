@@ -10,14 +10,19 @@ Adding an integration tile on to Datadog is easy! Just follow the steps below to
 
   `cp -r Integration YourAppName`
 
-3. Create your logo files on a white background canvas, exported to the PNG format, in 3 different sizes: 200x128px, 128x128px and 120x60px. Add the logo images to the  `YourAppName/logos/` directory
+3. Create your logo files on a white background canvas, exported to the PNG format, in 3 different sizes: 200x128px, 128x128px and 120x60px. Add the logo images to the  `YourAppName/logos/` directory. The file names should be as follows for the different sizes:
+
+    - **200x128px:** saas_logos-bot.png
+    - **128x128px:** avatars-bot.png
+    - **120x60px:** saas_logos-small.png
+
 
 5. Edit `YourAppName/README.md` with your application's information
 
   Your README file should provide the following sections:
 
-  - **Overview** (required): Let others know what they can expect to do with your integration.
-  - **Setup** (required): Provide information about how to install and configure your integration
+  - **Overview**: Let others know what they can expect to do with your integration
+  - **Setup**: Provide information about how to install and configure your integration
   - **Metrics**: Include a list of the metrics if your integration provides any
   - **Events**: Include a list of events if your integration provides any
   - **Service Checks**: Include a list of service checks if your integration provides any
@@ -37,7 +42,7 @@ Adding an integration tile on to Datadog is easy! Just follow the steps below to
   - **manifest_version**: The version of this manifest file
   - **maintainer**: Provide a valid email address where you can be contacted regarding this integration
   - **display_name**: The name of your integration
-  - **short_description**: Provide a short description of your integration  
+  - **short_description**: Provide a description (under 150 characters). This is what populates the hover-over content on the tile
   - **metric_prefix**: The root namespace for your metrics, usually the same as the `name` key
   - **metric_to_check**: The metric to check if the integration is working or not
   - **creates_events**: Boolean true/false, depending on whether your integration sends events or not
