@@ -47,7 +47,7 @@ Adding an integration tile on to Datadog is easy! Just follow the steps below to
   - **metric_to_check**: The metric to check if the integration is working or not
   - **creates_events**: Boolean true/false, depending on whether your integration sends events or not
   - **public_title**: Datadog-YourAppName Integration
-  - **type:** Either `crawler` or `agent`, if your integration is an agent check
+  - **type:** Either `crawler` or `check`, if your integration is an agent check
   - **doc_link**: Link to the documentation page for your integration once it eventually gets published
   - **is_public**: **true** (don't change this value)
   - **has_logo**: **true** (don't change this value)
