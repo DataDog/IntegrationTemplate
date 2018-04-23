@@ -11,5 +11,6 @@
   "type":"check",
   "doc_link": "https://docs.datadoghq.com/integrations/awesomeapp/",
   "is_public": true,
-  "has_logo": true
+  "has_logo": true,
+  "categories": ["category1", "category2"]
 }
