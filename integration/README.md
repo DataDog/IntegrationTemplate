@@ -9,7 +9,7 @@ Get metrics from Docker in real time to:
 
 * Visualize your containers' performance.
 
-![snapshot](https://raw.githubusercontent.com/DataDog/IntegrationTemplate/master/Integration/images/snapshot.png)
+![snapshot](https://raw.githubusercontent.com/DataDog/IntegrationTemplate/master/integration/images/snapshot.png)
 
 * Correlate the performance of containers with the applications running inside.
 
