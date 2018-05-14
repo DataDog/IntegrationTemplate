@@ -5,7 +5,7 @@ kind: integration
 git_integration_title: Rookout
 ---
 
-![logo](https://raw.githubusercontent.com/DataDog/integrations-extras/master/rookout/logo/avatars-bot.png)
+![logo](logos/avatars-bot.png)
 
 ## Overview
 
