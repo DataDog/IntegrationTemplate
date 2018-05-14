@@ -9,15 +9,16 @@ git_integration_title: Rookout
 
 ## Overview
 
-Collect custom metrics from your application with a few clicks and send it to DataDog. No need to write code, redeploy or restart your app. [Start a free trial](https://www.rookout.com/join-our-early-adopters-plan/).
+Collect [custom metrics](https://docs.datadoghq.com/getting_started/custom_metrics/) from your application with a few clicks and send it to DataDog. No need to write code, redeploy or restart your app. [Start a free trial](https://www.rookout.com/join-our-early-adopters-plan/).
 * Enhance monitoring and expedite production debugging with Rookout’s on-demand data collection. 
 * Have a new custom metric but you didn’t create the instrumentation to collect it? Not a problem. Rookout can collect custom metrics ad-hoc.
+* Datadog Pro customers are allotted 100 custom metrics per host & Enterprise customers are allotted 200 custom metrics per host. More will incur billing charges.
 
 ## Setup
 ### Installation
 Rookout sends data to Datadog via the DogstatsD service available from the Datadog agent.
 
-1. Install the [Datadog agent](https://docs.datadoghq.com/agent/).
+1. Install the [Datadog agent](https://docs.datadoghq.com/agent/) and [Rookout](https://docs.rookout.com/docs/getting-started.html).
 
 1. Log into [Rookout's webapp](https://app.rookout.com)
 
