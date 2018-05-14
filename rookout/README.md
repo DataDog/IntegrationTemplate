@@ -1,3 +1,10 @@
+---
+title: Datadog-Rookout Integration
+integration_title: Rookout
+kind: integration
+git_integration_title: Rookout
+---
+
 ![logo](https://raw.githubusercontent.com/DataDog/integrations-extras/master/rookout/logo/avatars-bot.png)
 
 ## Overview
@@ -12,7 +19,63 @@ Rookout sends data to Datadog via the DogstatsD service available from the Datad
 
 1. Install the [Datadog agent](https://docs.datadoghq.com/agent/).
 
-2. Add the `dogstatsd` target to your rule. [See full documentation](https://docs.rookout.com).
+1. Log into [Rookout's webapp](https://app.rookout.com)
+
+1. In the right panel (Rules) click on the menu button
+
+    ![Rule actions menu](screenshots/click_rule_action.png)
+
+1. Click on *Create new template* in order to edit a new rule template
+
+    ![Create new template button](screenshots/click_new_template.png)
+
+1. Copy the Datadog Custom Metric rule template [available here](rule-template.json) into the editor and replace the default rule template.
+
+    ![Datadog Custom Metric rule template](screenshots/datadog_rule_template.png)
+
+1. Click the save icon to save the template
+
+    ![Click Save Icon](screenshots/click_save.png)
+
+1. Add the newly created rule to any application as you would normally !
+
+### Configuration
+
+You can configure the rule to use specific actions, every rule should contain these attributes in the `processing.operations` object:
+
+```json
+{
+    "name": "dogstatsd",
+    "action": "<ACTION>",
+    "metric": "<METRIC_NAME>",
+    "target": {
+      "host": "<HOST_NAME>",
+      "port": 8125
+    }
+}
+```
+
+Depending on the actions, it needs different additional attributes:
+
+| Datadog Action |    Value    |
+|:--------------:|:-----------:|
+|    increment   | value       |
+|    decrement   | value       |
+|      event     | title, text |
+|      gauge     | value       |
+|    histogram   | value       |
+|     timing     | value       |
+|  distribution  | value       |
+For more information about these actions you can see [Dogstatsd documentation](https://docs.datadoghq.com/developers/dogstatsd/)
+
+Any attribute must be formatted the following way to be accepted by our rule:
+
+```json
+"value": {
+    "name": "calc",
+    "path": "MyValue"
+}
+```
 
 ## Data Collected
 You can create metrics and events by creating a Datadog output in your Rookout rule.
@@ -21,4 +84,4 @@ You can create metrics and events by creating a Datadog output in your Rookout r
 If you have any questions, contact us at support@rookout.com.
 
 ## Further Reading
-Find out more at https://rookout.com.
+Find out more at [https://docs.rookout.com/](https://docs.rookout.com/).
