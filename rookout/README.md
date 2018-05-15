@@ -58,7 +58,7 @@ You can configure the rule to use specific actions, every rule should contain th
 
 Depending on the actions, it needs different additional attributes:
 
-| Datadog Action |    Value    |
+| Datadog Action |    Attributes    |
 |:--------------:|:-----------:|
 |    increment   | value       |
 |    decrement   | value       |
@@ -74,12 +74,21 @@ Any attribute must be formatted the following way to be accepted by our rule:
 ```json
 "value": {
     "name": "calc",
-    "path": "MyValue"
+    "path": "123"
+}
+```
+
+```json
+"value": {
+    "name": "calc",
+    "path": "\"string\""
 }
 ```
 
 ## Data Collected
-You can create metrics and events by creating a Datadog output in your Rookout rule.
+You can create metrics and events by creating a Datadog output in your Rookout rule, whether it be the number of times a rule is triggered,
+an event that sends the stacktrace or exception information or any other custom information that you'd need from your application.
+
 
 ## Troubleshooting
 If you have any questions, contact us at support@rookout.com.
