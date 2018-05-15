@@ -86,8 +86,8 @@ Any attribute must be formatted the following way to be accepted by our rule:
 ```
 
 ## Data Collected
-You can create metrics and events by creating a Datadog output in your Rookout rule, whether it be the number of times a rule is triggered,
-an event that sends the stacktrace or exception information or any other custom information that you'd need from your application.
+You can collect custom metrics and events by creating a Datadog output in your Rookout rule, whether it be the number of times a rule is triggered,
+an event that sends a variable value, custom text or any other custom action and information that you'd need from your application that is supported by Datadog.
 
 
 ## Troubleshooting
