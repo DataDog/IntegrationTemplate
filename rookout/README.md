@@ -9,7 +9,7 @@ git_integration_title: Rookout
 
 ## Overview
 
-Collect [custom metrics](https://docs.datadoghq.com/getting_started/custom_metrics/) from your application with a few clicks and send it to DataDog. No need to write code, redeploy or restart your app. [Start a free trial](https://www.rookout.com/join-our-early-adopters-plan/).
+Collect [custom metrics](https://docs.datadoghq.com/getting_started/custom_metrics/) from your application with a few clicks and send it to DataDog. No need to write code, redeploy or restart your app. [Start a free trial](https://www.rookout.com/trial).
 * Enhance monitoring and expedite production debugging with Rookout’s on-demand data collection. 
 * Have a new custom metric but you didn’t create the instrumentation to collect it? Not a problem. Rookout can collect custom metrics ad-hoc.
 * Datadog Pro customers are allotted 100 custom metrics per host & Enterprise customers are allotted 200 custom metrics per host. More will incur billing charges.
