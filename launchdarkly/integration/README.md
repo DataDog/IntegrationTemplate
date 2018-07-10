@@ -10,7 +10,7 @@ Get metrics from LaunchDarkly service in real time to:
 
 The LaunchDarkly check is **NOT** included in the [Datadog Agent](https://app.datadoghq.com/account/settings#agent) package.
 
-### Configeration
+### Configuration
 To watch flag update events in DataDog, create a Zapier account so...
 
 **In [Zapier](https://zapier.com/):**
