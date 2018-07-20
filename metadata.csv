@@ -1,0 +1,3 @@
+metric_name,metric_type,interval,unit_name,description,orientation,integration,short_name
+apif.success,,,success,An API Fortress test success event,,,success
+apif.failure,,,failure,An API Fortress test failure event,,,failure
