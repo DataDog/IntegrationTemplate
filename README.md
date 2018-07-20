@@ -4,7 +4,7 @@ API Fortress' DataDog integration is designed to bring your API Fortress test re
 
 #Setup: 
 
-API Fortress' connecter documentation can be found here: http://apifortress.com/doc/setup-connectors/
+API Fortress' DataDog connecter documentation can be found here: http://apifortress.com/doc/setup-connectors-datadog/
 
 By setting up a connector and pushing the data to DataDog, all that remains is to assign the imported data (status.success, status.failure) to the desired dashboard and formatting. 
 
