@@ -1,16 +1,16 @@
 {
-  "name": "awesomeapp",
+  "name": "api fortress",
   "manifest_version": "1.0.0",
-  "maintainer": "<your_support_email_address>",
-  "display_name": "AwesomeApp",
-  "short_description": "A short blurb about what your app does",
-  "metric_prefix": "awesomeapp.",
-  "metric_to_check": "awesomeapp.test",
-  "creates_events": false,
-  "public_title": "Datadog-AwesomeApp Integration",
+  "maintainer": "jason@apifortress.com",
+  "display_name": "API Fortress",
+  "short_description": "Automated API Endpoint Testing for the Enterprise",
+  "metric_prefix": "apifortress.",
+  "metric_to_check": "apifortress.failure",
+  "creates_events": true,
+  "public_title": "Datadog-API Fortress Integration",
   "type":"check",
-  "doc_link": "https://docs.datadoghq.com/integrations/awesomeapp/",
+  "doc_link": "hhttp://apifortress.com/doc/setup-connectors/",
   "is_public": true,
   "has_logo": true,
-  "categories": ["category1", "category2"]
+  "categories": ["API", "CLOUD", "CONFIGURATION & DEPLOYMENT", "MONITORING"]
 }

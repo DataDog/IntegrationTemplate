@@ -1,0 +1,4 @@
+metric_name,metric_type,interval,unit_name,description,orientation,integration,short_name
+apifortress.events,,,success,An API Fortress test result event,,,result
+apifortress.fetch,,,ms,An API Fortress fetch result,,,fetch
+apifortress.latency,,,ms,An API Fortress latency result,,,latency
