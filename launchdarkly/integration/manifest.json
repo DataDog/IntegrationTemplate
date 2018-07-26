@@ -3,15 +3,14 @@
   "manifest_version": "1.0.0",
   "maintainer": "support@launchdarkly",
   "display_name": "LaunchDarkly",
-  "short_description": "Monitoring flag updates from LaunchDarkly with Datadog",
+  "short_description": "Track metrics from LaunchDarkly's relay proxy",
   "metric_prefix": "awesomeapp.",
   "metric_to_check": "awesomeapp.test",
   "creates_events": false,
   "public_title": "Datadog-LaunchDarkly Integration",
-  "type":"check",
+  "type": "check",
   "doc_link": "https://docs.datadoghq.com/integrations/awesomeapp/",
   "is_public": true,
   "has_logo": true,
   "categories": ["category1", "category2"]
 }
-
