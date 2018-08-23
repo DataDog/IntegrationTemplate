@@ -41,13 +41,32 @@ could send a lot of new series into Datadog, especially if the marks and measure
 on the site you are testing are dynamically generated. 
 
 Once you have configured the integration.  You can add to any Real Browser, HTTP, Port,
-or API check.  Just edit the check and go to the "Notifications" tab.
+or API check.  Just edit the check and go to the "Notifications" tab.  Here you can add
+the integration that you just created.
 
 ![add-integration-to-check](images/rigor_add_integration_to_check.png)
 
 
 ### Configuring Events Integration
+As an administrator, click the "Admin Tools" menu in the upper right hand of your 
+screen and select "Alert Webhooks".
 
+![webhook-menu](images/rigor_webhooks_menu.png)
+
+Add a new integration, by clicking the "New" button and clicking the Datadog tile.
+
+![webhooks-chooser](images/rigor_webhooks_chooser.png)
+
+Add a unique name for this webhook and make sure to update the triggers with your Datadog
+API key.
+
+![webhooks-configuration](images/rigor_webhooks_configuration.png)
+
+Once you have configured the integration.  You can add to any Real Browser, HTTP, Port,
+or API check.  Just edit the check and go to the "Notifications" tab.  Here you can add
+the webhook that you just created.
+
+![add-webhookto-check](images/rigor_add_webhook_to_check.png)
 
 ### Metrics
 
@@ -105,13 +124,22 @@ Additionally, if the integration is configured, browser User Timings will be sen
 `rigor.real_browser.marks` and `rigor.real_browser.measures` namespaces.
 
 ### Events
-**NEED HELP HERE** @William - need your inupt here - not sure if we push system events, etc.
+
+When a check is configured to alert via a Datadog event, 2 events types will be pushed
+into Datadog:
+- **Failed** - whenever the check fails enough to pass the threshold so that it sends an 
+  alert
+- **Back online** - whenever the check successfully runs while in an alerting state 
+
+![events-example](images/rigor_events_example.png)
 
 ### Service Checks
-**NEED HELP HERE** @William - not sure what this is?
+
+The Rigor - Datadog integration does not include any service check.
 
 ### Troubleshooting
 Need help? Contact [Rigor Support](mailto:support@rigor.com).
 
 ### Further Reading
-Learn more about Rigor and how we can help make your website faster, visit [https://rigor.com](https://rigor.com).
+Learn more about Rigor and how we can help make your website faster, visit 
+[https://rigor.com](https://rigor.com).
