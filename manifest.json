@@ -1,0 +1,16 @@
+{
+  "name": "Citrix Intelligent Traffic Management",
+  "manifest_version": "1.0.0",
+  "maintainer": "sudhir.patamsetti@citrix.com",
+  "display_name": "Citrix ITM",
+  "short_description": "Manage Citrix ITM Openmix traffic with Datadog monitors and alerts",
+  "metric_prefix": "CitrixITM.",
+  "metric_to_check": "CitrixITM.test",
+  "creates_events": false,
+  "public_title": "Datadog-Citrix ITM integration",
+  "type":"check",
+  "doc_link": "https://docs.datadoghq.com/integrations/CitrixITM/",
+  "is_public": true,
+  "has_logo": true,
+  "categories": ["category1", "category2"]
+}
