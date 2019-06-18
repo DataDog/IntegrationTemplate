@@ -9,7 +9,7 @@ Get metrics from Docker in real time to:
 
 * Visualize your containers' performance.
 
-![snapshot](https://raw.githubusercontent.com/DataDog/IntegrationTemplate/master/integration/images/snapshot.png)
+![snapshot][1]
 
 * Correlate the performance of containers with the applications running inside.
 
@@ -25,7 +25,7 @@ This section should cover anything that you can configure in the Datadog interfa
 
 ## Data Collected
 ### Metrics
-See [metadata.csv](https://github.com/DataDog/integrations-extras/blob/master/YourAppName/metadata.csv) for a list of metrics provided by this integration.
+See [metadata.csv][2] for a list of metrics provided by this integration.
 
 **or**
 
@@ -33,7 +33,7 @@ The AwesomeApp integration does not provide any metrics at this time.
 
 ### Events
 
-All AwesomeApp deployment events are sent to your [Datadog Event Stream](https://docs.datadoghq.com/graphing/event_stream/)
+All AwesomeApp deployment events are sent to your [Datadog Event Stream][3]
 
 **or**
 
@@ -47,8 +47,13 @@ List service checks that the integration provides here
 The AwesomeApp integration does not include any service checks at this time.
 
 ## Troubleshooting
-Need help? Contact [Datadog Support](http://docs.datadoghq.com/help/).
+Need help? Contact [Datadog Support][4].
 
 ## Further Reading
 
 Learn more about infrastructure monitoring and all our integrations on [our blog](https://www.datadoghq.com/blog/).
+
+[1]: https://raw.githubusercontent.com/DataDog/IntegrationTemplate/master/integration/assets/images/snapshot.png
+[2]: https://github.com/DataDog/IntegrationTemplate/blob/master/integration/metadata.csv
+[3]: https://docs.datadoghq.com/graphing/event_stream/
+[4]: http://docs.datadoghq.com/help/
