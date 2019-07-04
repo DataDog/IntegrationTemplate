@@ -1,0 +1,70 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="preview.css">
+  </head>
+  
+  <body>
+    <!--<%def name="title()">Your Integration</%def>-->
+    <div class="sectiontitle" id="previewtitle"><h2>Tile preview</h2></div>
+    <div class="saas_tile" id="tile">
+      <div class="saas_avatar saas_in">
+        <img src="Images/200x128.png">
+      </div>
+      <div class="saas_content">
+        <p class="saas_name saas_in">Druid</p>
+        <div class="saas_controls">
+          <button class="meh">
+            <span class="js-icon text-success">+</span>
+            <span class="saas_msg" data-state_msg="Available" data-action_msg="Install">Available</span>
+          </button>
+        </div>
+        <div class="saas_description saas_in" id="tiledescription">Druid is an open-source data store designed for sub-second queries on real-time and historical data. </div>
+      </div>
+    </div>
+    
+    <div class="integration_content" id="int-overview">
+      <h2>Overview</h2>
+      <p>Get metrics from Druid related to queries, ingestion, and coordination in real time</p>
+      <ul>
+        <li>Visualize performance metrics</li>
+      </ul>
+      <p>
+        <img class="screenshot" src="Images/snapshot.png" />
+      </p>
+    </div>
+    
+    <div class="integration_content"  id="int-configuration">
+      <h2>Configuration</h2>
+      <p>
+        <em>To capture metrics you need to...</em>
+      </p>
+      <ol>
+        <li>Configure Druid(
+          <a href="http://druid.io/docs/latest/development/extensions-contrib/statsd.html">see doc<a/>)<br>
+          <pre class="textfile">
+            <code> Example Configuration in common.runtime.properties:
+# Monitoring
+#
+druid.emitter=composing
+druid.emitter.composing.emitters=["logging", "statsd"]
+
+druid.monitoring.monitors=["com.metamx.metrics.JvmMonitor"]
+druid.emitter.logging.logLevel=info
+
+druid.emitter.statsd.hostname=dogstatsd
+druid.emitter.statsd.port=8125
+druid.emitter.statsd.dimensionMapPath=dist/druid/extensions/statsd-emitter/metricDimensions.json
+
+            </code>
+           </pre>
+        </li>
+        <li>If you want to take advantage of tagging system from Datadog, need to change some code in statsd-emitter and rebuild it with <a href="https://github.com/DataDog/java-dogstatsd-client">java-dogstatsd-client<a/><br>
+         We're working on open source those changes to Druid statsd-emitter.
+        <pre class="textfile">
+        </pre>
+       </li>
+     </ol>
+   </div>
+</body>
+</html>
