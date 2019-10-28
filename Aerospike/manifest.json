@@ -1,0 +1,15 @@
+{
+  "name": "aerospike",
+  "manifest_version": "1.0.0",
+  "maintainer": "r.guo@aerospike.com",
+  "display_name": "Aerospike",
+  "short_description": "Flash optimized high performance NoSQL Database",
+  "metric_prefix": "aerospike.",
+  "metric_to_check": "aerospike.uptime",
+  "creates_events": false,
+  "public_title": "Datadog-Aerospike Integration",
+  "type":"check",
+  "doc_link": "https://github.com/DataDog/integrations-extras/tree/master/aerospike",
+  "is_public": true,
+  "has_logo": true
+}
