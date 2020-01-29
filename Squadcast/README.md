@@ -1,7 +1,9 @@
 ## Overview
 
 ![Squadcast Dashboard](assets/images/dashboard.png)
-Use the Datadog-Squadcast integration to send Datadog alerts to Squadcast and seamlessly take actions on these alerts within Squadcast platform
+
+Use the Datadog-Squadcast integration to send Datadog alerts to Squadcast and seamlessly take actions on these alerts within Squadcast platform.
+
 Connect Squadcast to Datadog in order to:
 - Trigger and resolve incidents from Datadog
 - Tackle incidents and set up escalation policies as they occur
@@ -9,7 +11,7 @@ Connect Squadcast to Datadog in order to:
 
 ## Setup
 
-Check out this documentation from Squadcast for more details on setup.
+Check out the [official Datadog documentation](https://support.squadcast.com/docs/datadog) from Squadcast for more details on setup.
 
 ## Data Collected
 ### Metrics
@@ -25,5 +27,5 @@ Your Squadcast Triggered / Resolved events will appear in your Squadcast platfor
 Squadcast integration does not include any service checks.
 
 ## Troubleshooting
-Need help? Contact [Datadog Support][4].
+Need help? Contact [Datadog Support](https://docs.datadoghq.com/help/).
 
