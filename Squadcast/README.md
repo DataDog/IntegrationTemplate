@@ -1,7 +1,5 @@
 ## Overview
 
-![Squadcast Dashboard](assets/images/dashboard.png)
-
 Use the Datadog-Squadcast integration to send Datadog alerts to Squadcast and seamlessly take actions on these alerts within Squadcast platform.
 
 Connect Squadcast to Datadog in order to:
