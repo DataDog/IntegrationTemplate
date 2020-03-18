@@ -1,0 +1,28 @@
+{
+  "display_name": "Rundeck",
+  "maintainer": "forrest@rundeck.com",
+  "manifest_version": "1.0.0",
+  "name": "Rundeck",
+  "creates_events": false,
+  "short_description": "Automate Remeditation Actions using Rundeck Webhooks",
+  "guid": "9c1029fc-5cdf-451a-907b-28b38294461a",
+  "support": "Rundeck",
+  "supported_os": [
+    "linux",
+    "mac_os",
+    "windows"
+  ],
+  "public_title": "Datadog-Rundeck Integration",
+  "categories": [
+    "orchestration",
+    "notification"
+  ],
+  "type": "check",
+  "is_public": true,
+  "integration_id": "rundeck",
+  "assets": {
+    "dashboards": {},
+    "monitors": {},
+    "service_checks": {}
+  }
+}
