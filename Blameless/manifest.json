@@ -6,7 +6,7 @@
   "metric_prefix": "blameless.",
   "metric_to_check": "",
   "creates_events": false,
-  "short_description": "Push you metric data to Blameless to create, measure, and maintain your error budgets.",
+  "short_description": "Push your Datadog metrics into Blameless to create, measure, and take action on error budgets.",
   "guid": "8e5e4a84-9d78-4fb3-b800-252e2330b5a0",
   "support": "core",
   "supported_os": [
