@@ -1,7 +1,7 @@
 {
     "manifest_version": "2.0.0",
     "app_uuid": "",
-    "app_id": "F5 Distributed Cloud Services",
+    "app_id": "f5-distributed-cloud-services",
     "display_on_public_website": true,
     "tile": {
       "overview": "README.md#Overview",
@@ -14,18 +14,17 @@
         {
           "media_type": "video",
           "caption": "Configuring remote logging from F5 Distributed Cloud Services to Datadog",
-          "image_url": "images/dashboard_image.png",
-          "vimeo_id": 637675972
+          "image_url": "assets/images/xcdatadog.mp4"
         },
         {
           "media_type": "image",
           "caption": "The F5 Distributed Cloud Services global log receiver",
-          "image_url": "images/logreceiver_config.png"
+          "image_url": "assets/images/logreceiver_config.png"
         },
         {
           "media_type": "image",
           "caption": "The F5 Distributed Cloud Services access log overview dashboard.",
-          "image_url": "images/dashboard_image.png"
+          "image_url": "assets/images/dashboard_image.png"
         }
       ],
       "classifier_tags": [
@@ -37,20 +36,18 @@
     },
     "author": {
       "name": "F5 Distributed Cloud Services",
-      "homepage": "https://www.f5.com/cloud"
+      "homepage": "https://www.f5.com/cloud",
+      "sales_email": "",
+      "support_email": "",
+      "vendor_id": ""
     },
     "oauth": {},
     "assets": {
-      "integration": {
-        "source_type_name": "F5 Distributed Cloud Services",
-        "configuration": {},
-        "events": {
-          "creates_events": true
-        },
-        "service_checks": {}
-      },
       "dashboards": {
-        "launchdarkly": "dashboards/f5xc_access.json"
+        "f5xc_access": "assets/dashboards/f5xc_access.json"
+      },
+      "saved_views": {
+        "f5xc_all": "assets/saved_views/all.json"
       }
     }
   }
