@@ -1,7 +1,7 @@
-# CHANGELOG - AwesomeApp Integration
+# CHANGELOG - F5 Distributed Cloud Services Integration
 
 1.0.0 / Unreleased
 ==================
 ### Changes
 
-* [FEATURE] Initial AwesomeApp Integration Tile.
+* [FEATURE] Initial F5XC Integration Tile.
