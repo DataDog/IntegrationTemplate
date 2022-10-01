@@ -21,7 +21,6 @@ The example shown in this guide creates a global log receiver object in the Cons
 
 Perform the following in the F5® Distributed Cloud Console:
 
----
 **Step 1: Start creating a global log receiver**
 
 - In the Console home page, select Shared Configuration service.
@@ -66,6 +65,9 @@ Do the following for TLS section:
 **Step 4: Complete log receiver creation**
 
 - Select Save & Exit to complete creating the global log receiver. Verify that logs are received into your Datadog account.
+
+##
+
 ## Data Collected
 
 ### Metrics
