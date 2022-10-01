@@ -66,8 +66,6 @@ Do the following for TLS section:
 
 - Select Save & Exit to complete creating the global log receiver. Verify that logs are received into your Datadog account.
 
-##
-
 ## Data Collected
 
 ### Metrics
