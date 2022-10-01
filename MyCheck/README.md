@@ -13,6 +13,8 @@ In addition to the following configuration guidance.  The F5 Distributed Cloud S
 - Dashboard - *Access Log Overview*
 - Saved View - *Including facets for commonly queried fields*
 
+![snapshot][2]
+
 ## Setup
 
 You can configure global log streaming in either system namespace or in shared namespace. In case of configuring in shared namespace, you can configure to stream from either shared namespace or all namespaces or specific list of namespaces. If you are configuring in system namespace, you can only stream logs from system namespace.
@@ -27,7 +29,7 @@ Perform the following in the F5® Distributed Cloud Console:
 - Select Manage > Global Log Receiver.
 - Select Global Log Receiver in case of Cloud and Edge Sites service.
 
-![snapshot][2]
+![snapshot][3]
 
 - Select Add Global Log Receiver button.
 
@@ -44,7 +46,7 @@ Do the following in the Global Log Receiver section:
     - Provide the appropriate data Doc site name, (datadoghq.com) in this case.   
     - Provide a Datadog API key.
 
-![snapshot][3]
+![snapshot][4]
 
 **Step 3: Optionally, configure advanced settings**
 Advanced settings include configuring batch options and TLS. Using batch options, you can apply limits such as maximum number of messages bytes or timeout for a batch of logs to be sent to the receiver.
@@ -81,13 +83,15 @@ The F5 Distributed Cloud Services integration does not include any events at thi
 The F5 Distributed Cloud Services integration does not include any service checks at this time.
 
 ## Troubleshooting
-Need help? Contact [Datadog Support][4].
+
+Need help? Contact [Datadog Support][5].
 
 ## Further Reading
 
-Learn more about infrastructure monitoring and all our integrations on [our blog](https://www.datadoghq.com/blog/).
+Learn more about [F5 Distributed Cloud Services](https://www.f5.com/cloud).
 
 [1]: assets/images/xcarch-min.png
-[2]: assets/images/image-0.png
-[3]: assets/images/logreceiver-config.png
-
+[2]: assets/images/dashboard-image.png
+[3]: assets/images/image-0.png
+[4]: assets/images/logreceiver-config.png
+[5]: http://docs.datadoghq.com/help/
