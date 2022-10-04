@@ -1,3 +1,6 @@
+# DEPRECATION NOTICE
+This repository is no longer active. Creation of new Datadog integrations should follow the official [documentation pages](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate)
+
 # Datadog Integration Tile Template
 
 This repository is meant to help create tiles for Integrations which do *not* contain Python checks. Any Integrations which contain Python code - typically those that are run via the Agent - should use the [standard tooling][1] for generating tile templates.
