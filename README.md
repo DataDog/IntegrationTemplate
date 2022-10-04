@@ -1,5 +1,5 @@
 # DEPRECATION NOTICE
-This repository is no longer active. Creation of new Datadog integrations should follow the official [documentation pages](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate)
+This repository is no longer active. Creation of new Datadog integrations should follow the instructions laid out in the [integration documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate).
 
 # Datadog Integration Tile Template
 
