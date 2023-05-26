@@ -1,3 +1,9 @@
+# Archival
+This repo was archived by the Apollo Security team on 2023-05-26. 
+
+This repo is a fork of `DataDog/IntegrationTemplate`. Please refer to the [upstream repo](https://github.com/DataDog/IntegrationTemplate) for newer revisions of this code.
+
+
 # Datadog Integration Template
 
 Adding an integration tile on to Datadog is easy! Just follow the steps below to use the template from this repo and submit a pull request to get someone from the integrations team to review.
